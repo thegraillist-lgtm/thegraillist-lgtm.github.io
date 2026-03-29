@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+     gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+    });
+
+  </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+<title>Top 10 Most Valuable Comics | Marvel, DC & Golden Age</title>
+<meta name="description" content="Explore the most expensive comic books ever sold, from Action Comics #1 to Amazing Fantasy #15. 2026 market values for serious collectors.">
+<meta name="keywords" content="rare comics, most expensive comic books, Marvel Comics, DC Comics, Golden Age comics, Action Comics 1, Amazing Fantasy 15, Spider-Man first appearance, Superman first appearance, Batman first appearance">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="canonical" href="https://thegraillist.com/comics.html">
+
+
+<!-- Open Graph for social sharing -->
+<meta property="og:title" content="Most Valuable Comic Books Guide 2026">
+<meta property="og:description" content="Check the latest record-breaking sales of Marvel, DC, and Golden Age comics. Are your old comics worth millions?">
+<meta property="og:url" content="https://thegraillist.com/comics.html">
+<meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+ <style>
+        /* Štýl pre cookie lištu prispôsobený vášmu webu */
+        #cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background: #d8d1be;
+            color: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            z-index: 9999;
+            display: none;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #eee;
+        }
+        #cookie-banner button {
+            background: #3f5d73;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        #cookie-banner button:hover {
+            background: #0056b3;
+        }
+        body.dark #cookie-banner {
+            background: #121212;      /* ČIERNA */
+            color: white;             /* BIELY TEXT */
+            border-color: #333; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    </style>
+
+
+    <script>
+        function setLanguage(lang){
+            localStorage.setItem("lang", lang);
+            document.querySelectorAll("[data-en], [data-sk], [data-de]").forEach(el => {
+                el.classList.remove("show");
+            });
+            document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+                el.classList.add("show");
+            });
+        }
+        function autoLanguage(){
+            let saved = localStorage.getItem("lang");
+            if(saved){
+                setLanguage(saved);
+                return;
+            }
+            let lang = navigator.language;
+            if(lang.startsWith("sk")) setLanguage("sk")
+            else if(lang.startsWith("de")) setLanguage("de")
+            else setLanguage("en");
+        }
+       function toggleDark(){
+    document.body.classList.toggle("dark");
+    let icon = document.getElementById("themeIcon");
+
+    if(document.body.classList.contains("dark")){
+        // --- SLNKO (Zväčšené na 24px) ---
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+        localStorage.setItem("theme","dark");
+    } else {
+        // --- MESIAC (Zväčšené SVG namiesto FontAwesome) ---
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+
+localStorage.setItem("theme","light"); 
+    }
+}
+
+function loadTheme(){
+    let theme = localStorage.getItem("theme");
+    let icon = document.getElementById("themeIcon");
+
+    if(theme === "dark"){
+        document.body.classList.add("dark");
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+    } else {
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+    }
+}
+
+
+         // COOKIE LOGIKA + NAČÍTANIE GA
+        function loadAnalytics() {
+        if (window.gaLoaded) return;
+        window.gaLoaded = true;
+        let script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-RPTE5JJE14";
+        script.async = true;
+        document.head.appendChild(script);
+        
+script.onload = function() {
+    gtag('js', new Date());
+    gtag('config', 'G-RPTE5JJE14', {
+        'anonymize_ip': true
+    });
+};
+}
+
+
+    function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+    gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+    });
+    loadAnalytics();
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'false');
+
+    gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+    });
+
+ document.getElementById('cookie-banner').style.display = 'none';
+}
+
+        document.addEventListener("DOMContentLoaded", function() {
+    autoLanguage();   // nastaví jazyk
+    loadTheme();      // nastaví tému
+    formatPrices();   // formátuje ceny
+
+ let consent = localStorage.getItem('cookieConsent');
+
+    if (consent === 'true') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+        });
+        loadAnalytics();
+    }
+    else if (consent === 'false') {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    else {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    document.body.classList.add("visible");
+});
+
+
+        function formatPrices() {
+            const cells = document.querySelectorAll('td:last-child');
+            cells.forEach(cell => {
+                let text = cell.innerText;
+                let parts = text.split('/');
+                const expand = (val) => {
+                    let num = parseFloat(val.replace(/[^0-9.]/g, ''));
+                    let multiplier = val.includes('M') ? 1000000 : (val.includes('K') ? 1000 : 1);
+                    return Math.floor(num * multiplier).toLocaleString('sk-SK');
+                };
+                if (parts.length === 2) {
+                    let usd = expand(parts[0].trim());
+                    let eur = expand(parts[1].trim());
+                    cell.innerHTML = `<div class="usd">$ ${usd}</div><div class="eur">€ ${eur}</div>`;
+                }
+            });
+        }
+/* HAMBURGER MENU */
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    const btn = document.getElementById("hamburgerBtn");
+
+    menu.classList.toggle("open");
+    btn.classList.toggle("active");
+}
+
+    </script>
+</head>
+<body>
+    <div id="cookie-banner">
+    <p data-sk>Tento web používa cookies na analýzu návštevnosti. Pomôžete nám tak tvoriť lepší obsah?</p>
+    <p data-en>This website uses cookies to analyze traffic. Help us create better content?</p>
+    <p data-de>Diese Website verwendet Cookies, um den Datenverkehr zu analysieren. Helfen Sie uns, bessere Inhalte zu erstellen?</p>
+
+    <button onclick="acceptCookies()">
+        <span data-sk>Súhlasím</span>
+        <span data-en>I Agree</span>
+        <span data-de>Ich stimme zu</span>
+    </button>
+
+    <button onclick="rejectCookies()" style="margin-left: 10px; background:transparent; border:1px solid #888; color: inherit;">
+        <span data-sk>Odmietnuť</span>
+        <span data-en>Reject</span>
+        <span data-de>Ablehnen</span>
+    </button>
+</div>
+
+
+    <header>
+    <div class="logo-container"> <div class="logo-text">🏆 The Grail List</div>
+        <h1 class="main-subtitle">
+            <span data-en class="show">Premier Comic Books: Rare Issues & Investment Art</span>
+            <span data-sk>Prémiové komiksy: Vzácne vydania a investičné umenie</span>
+            <span data-de>Premium-Comics: Seltene Ausgaben & Investment-Kunst</span>
+        </h1>
+    </div>
+
+        <div class="social-icons">
+
+    <div class="lang-switch">
+        <span onclick="setLanguage('en')">EN</span>
+        <span onclick="setLanguage('de')">DE</span>
+        <span onclick="setLanguage('sk')">SK</span>
+    </div>
+
+    <span class="divider">|</span>
+
+    <div class="theme-toggle" onclick="toggleDark()" id="themeIcon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </svg>
+</div>
+
+    <a href="https://www.facebook.com/profile.php?id=61583771206415" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/thegraillist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="mailto:thegraillist@gmail.com" title="thegraillist@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+
+   </header>
+
+    <nav class="main-nav">
+
+<button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="menu-text">MENU</span>
+</button>
+
+
+<ul id="navMenu">
+            <li><a href="index.html"><span data-en>Home</span><span data-sk>Domov</span><span data-de>Startseite</span></a></li>
+            <li><a href="cards.html"><span data-en>Trading Cards</span><span data-sk>Zberateľské karty</span><span data-de>Sammelkarten</span></a></li>
+            <li><a href="comics.html" class="active"><span data-en>Comics & Art</span><span data-sk>Komiksy a umenie</span><span data-de>Comics & Kunst</span></a></li>
+            <li><a href="games.html"><span data-en>Video Games</span><span data-sk>Videohry</span><span data-de>Videospiele</span></a></li>
+            <li><a href="figures.html"><span data-en>Figures & Toys</span><span data-sk>Figúrky a hračky</span><span data-de>Figuren & Spielzeug</span></a></li>
+            <li><a href="fashion.html"><span data-en>Fashion & Luxury</span><span data-sk>Móda a luxus</span><span data-de>Mode & Luxus</span></a></li>
+            <li><a href="models.html"><span data-en>Die-Cast & Models</span><span data-sk>Modely a autíčka</span><span data-de>Die-Cast & Modelle</span></a></li>
+            <li><a href="historical.html"><span data-en>Historical & Rare</span><span data-sk>Historické a vzácne</span><span data-de>Historisch & Selten</span></a></li>
+            <li><a href="articles.html"><span data-en>Articles</span><span data-sk>Články</span><span data-de>Artikel</span></a></li>
+	    <li><a href="community.html"><span data-en>Community Hub</span><span data-sk>Komunita</span><span data-de>Gemeinschaft</span></a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-text">
+
+    <div data-sk class="show">
+        <h1 class="gold-text" data-text="Komiksy a umenie">Komiksy a umenie</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Vstúpte do sveta, kde sa atrament a papier menia na miliónové legendy. Preskúmajte najvzácnejšie komiksy od Marvelu, DC a ikonické poklady Golden Age, ktoré položili základy superhrdinského univerza.
+        </p>
+    </div>
+
+    <div data-en>
+        <h1 class="gold-text" data-text="Comics & Art">Comics & Art</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Step into a world where ink and paper transform into million-dollar legends. Explore the rarest comics from Marvel, DC, and iconic Golden Age treasures that laid the foundations of the superhero universe.
+        </p>
+    </div>
+
+    <div data-de>
+        <h1 class="gold-text" data-text="Comics & Kunst">Comics & Kunst</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Treten Sie ein in eine Welt, in der sich Tinte und Papier in Millionen-Dollar-Legenden verwandeln. Entdecken Sie die seltensten Comics von Marvel, DC und ikonische Schätze des Golden Age, die das Fundament des Superhelden-Universums legten.
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+</section>
+
+
+    <div class="grid">
+        <div class="card pokemon">
+            <h2>Marvel Comics</h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Amazing+Fantasy+15+CGC+9.6+Spider-Man">Amazing Fantasy #15 (CGC 9.6)</a></td><td>$3.6M / €3.3M</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Captain+America+Comics+1+1941+CGC+9.4">Captain America #1 (CGC 9.4)</a></td><td>$3.1M / €2.8M</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Marvel+Comics+1+1939+CGC+9.0">Marvel Comics #1 (CGC 9.0)</a></td><td>$2.4M / €2.2M</td></tr>
+<tr class="partner-row" onclick="window.location.href='mailto:thegraillist@gmail.com'">
+    <td colspan="2" style="padding: 20px 15px;">
+        <div class="promo-link">
+            <span data-en>Your shop here &raquo;</span>
+            <span data-sk>Váš obchod tu &raquo;</span>
+            <span data-de>Ihr Shop hier &raquo;</span>
+        </div>
+        <div class="promo-email">
+            contact: thegraillist<span style="display:none">remove</span>@gmail.com
+        </div>
+    </td>
+</tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=X-Men+1+1963+CGC+9.6">X-Men #1 (CGC 9.6)</a></td><td>$800K / €740K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Tales+of+Suspense+39+CGC+9.6+Iron+Man">Tales of Suspense #39 (CGC 9.6)</a></td><td>$600K / €550K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Incredible+Hulk+1+1962+CGC+9.2">Incredible Hulk #1 (CGC 9.2)</a></td><td>$490K / €450K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Fantastic+Four+1+1961+CGC+9.4">Fantastic Four #1 (CGC 9.4)</a></td><td>$450K / €415K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Journey+into+Mystery+83+Thor+CGC+9.4">Journey into Mystery #83 (CGC 9.4)</a></td><td>$430K / €395K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Avengers+1+1963+CGC+9.6">Avengers #1 (CGC 9.6)</a></td><td>$350K / €320K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Daredevil+1+1964+CGC+9.6">Daredevil #1 (CGC 9.6)</a></td><td>$250K / €230K</td></tr>
+            </table>
+        </div>
+
+        <div class="card comics">
+            <h2>DC Comics</h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Action+Comics+1+CGC+8.5+Superman">Action Comics #1 (CGC 8.5)</a></td><td>$6M / €5.5M</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Superman+1+1939+CGC+8.0">Superman #1 (CGC 8.0)</a></td><td>$2.6M / €2.4M</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Batman+1+1940+CGC+9.4">Batman #1 (CGC 9.4)</a></td><td>$2.2M / €2M</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Detective+Comics+27+CGC+7.0+Batman">Detective Comics #27 (CGC 7.0)</a></td><td>$1.7M / €1.5M</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=All+Star+Comics+8+CGC+9.4+Wonder+Woman">All Star Comics #8 (CGC 9.4)</a></td><td>$930K / €850K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Flash+Comics+1+1940+CGC+9.0">Flash Comics #1 (CGC 9.0)</a></td><td>$450K / €415K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Sensation+Comics+1+CGC+9.0+Wonder+Woman">Sensation Comics #1 (CGC 9.0)</a></td><td>$400K / €370K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Showcase+4+CGC+9.0+Flash">Showcase #4 (CGC 9.0)</a></td><td>$180K / €165K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Green+Lantern+1+1941+CGC+9.0">Green Lantern #1 (CGC 9.0)</a></td><td>$150K / €138K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Adventure+Comics+40+CGC+9.0+Sandman">Adventure Comics #40 (CGC 9.0)</a></td><td>$120K / €110K</td></tr>
+            </table>
+        </div>
+
+        <div class="card retro-video-games">
+            <h2>Golden Age</h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Pep+Comics+22+1941+CGC+9.0+Archie">Pep Comics #22 (1st Archie CGC 9.0)</a></td><td>$375K / €345K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Whiz+Comics+2+1940+CGC+9.0+Shazam">Whiz Comics #2 (1st Shazam CGC 9.0)</a></td><td>$280K / €255K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=More+Fun+Comics+52+1940+CGC+9.0+Spectre">More Fun Comics #52 (CGC 9.0)</a></td><td>$250K / €230K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Captain+Marvel+Adventures+1+1941+CGC+9.0">Captain Marvel Adventures #1 (CGC 9.0)</a></td><td>$220K / €200K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Famous+Funnies+1+1934+CGC+9.0">Famous Funnies #1 (CGC 9.0)</a></td><td>$100K / €92K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Planet+Comics+1+1940+CGC+9.0">Planet Comics #1 (CGC 9.0)</a></td><td>$80K / €74K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Jumbo+Comics+1+1938+CGC+9.0">Jumbo Comics #1 (CGC 9.0)</a></td><td>$75K / €69K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mickey+Mouse+Magazine+1+1935+CGC+9.0">Mickey Mouse Mag. #1 (CGC 9.0)</a></td><td>$60K / €55K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Wonder+World+Comics+3+1939+CGC+9.0">Wonder World Comics #3 (CGC 9.0)</a></td><td>$55K / €50K</td></tr>
+        <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=New+Adventure+Comics+12+1937+CGC+9.0">New Adventure Comics #12 (CGC 9.0)</a></td><td>$50K / €46K</td></tr>
+            </table>
+        </div>
+    </div>
+
+ <footer>
+    <div class="disclaimer">
+        <p>
+            <span class="warning-icon">⚠️</span>
+            <strong data-en>AI & Search Disclaimer:</strong>
+            <strong data-sk>Upozornenie AI a vyhľadávania:</strong>
+            <strong data-de>KI- und Suchhinweis:</strong>
+            
+            <span data-en>These rankings are generated by AI. Market prices fluctuate rapidly and <strong>all values are rounded for clarity</strong>. Search links are for reference only; results may show similar or illustrative items that do not match the exact specifications.</span>
+            <span data-sk>Tieto rebríčky sú generované AI. Ceny na trhu sa rýchlo menia a <strong>všetky sumy sú pre lepšiu prehľadnosť zaokrúhlené</strong>. Odkazy na vyhľadávanie sú len orientačné; výsledky môžu zobrazovať podobné alebo ilustračné predmety, ktoré nezodpovedajú presnej špecifikácii.</span>
+            <span data-de>Diese Ranglisten werden von KI erstellt. Marktpreise schwanken schnell und <strong>alle Beträge sind aus Gründen der Übersichtlichkeit gerundet</strong>. Suchlinks dienen nur als Referenz; die Ergebnisse können ähnliche oder illustrative Objekte zeigen, die nicht der genauen Spezifikation entsprechen.</span>
+        </p>
+        
+        <p data-en>This guide is for educational purposes only and does not constitute financial advice. Accuracy is not guaranteed.</p>
+        <p data-sk>Táto stránka slúži len na vzdelávacie účely a nepredstavuje finančné poradenstvo. Presnosť údajov nie je zaručená.</p>
+        <p data-de>Diese Seite dient nur zu Bildungszwecken und stellt keine Finanzberatung dar. Die Genauigkeit der Daten wird nicht garantiert.</p>
+        
+        <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
+    </div>
+</footer>
+
+</body>
+</html>

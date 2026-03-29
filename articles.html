@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+     gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+    });
+
+    
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Exclusive Collector Stories | Príbehy vzácnych artefaktov | Sammler-Geschichten | The Grail List</title>
+    <meta name="description" content="Kompletný archív fascinujúcich príbehov za najvzácnejšími zberateľskými predmetmi sveta. Od gitary Kurta Cobaina po 1933 Double Eagle na thegraillist.com.">
+    <meta name="keywords" content="thegraillist, zberateľské príbehy, vzácne artefakty, archív článkov, numizmatika, hudobné rarity, historical collectibles archive">
+    <link rel="canonical" href="https://thegraillist.com/articles.html">
+
+    <meta property="og:site_name" content="The Grail List">
+    <meta property="og:title" content="The Grail List: Archív príbehov o legendárnych kúskoch">
+    <meta property="og:description" content="Prelistujte si naše najnovšie články o predmetoch, ktoré prepísali históriu a aukčné rekordy na thegraillist.com.">
+    <meta property="og:url" content="https://thegraillist.com/articles.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Collector Stories | thegraillist.com">
+    <meta name="twitter:description" content="Discover the stories behind the world's most valuable grails.">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+ <style>
+        /* Štýl pre cookie lištu prispôsobený vášmu webu */
+        #cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background: #d8d1be;
+            color: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            z-index: 9999;
+            display: none;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #eee;
+        }
+        #cookie-banner button {
+            background: #3f5d73;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        #cookie-banner button:hover {
+            background: #0056b3;
+        }
+        body.dark #cookie-banner {
+            background: #121212;      /* ČIERNA */
+            color: white;             /* BIELY TEXT */
+            border-color: #333; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    </style>
+
+    
+    <script>
+        function setLanguage(lang){
+            localStorage.setItem("lang", lang);
+            document.querySelectorAll("[data-en], [data-sk], [data-de]").forEach(el => {
+                el.classList.remove("show");
+            });
+            document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+                el.classList.add("show");
+            });
+        }
+        function autoLanguage(){
+            let saved = localStorage.getItem("lang");
+            if(saved){ setLanguage(saved); return; }
+            let lang = navigator.language;
+            if(lang.startsWith("sk")) setLanguage("sk");
+            else if(lang.startsWith("de")) setLanguage("de");
+            else setLanguage("en");
+        }
+        function toggleDark(){
+    document.body.classList.toggle("dark");
+    let icon = document.getElementById("themeIcon");
+
+    if(document.body.classList.contains("dark")){
+        // --- SLNKO (Zväčšené na 24px) ---
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+        localStorage.setItem("theme","dark");
+    } else {
+        // --- MESIAC (Zväčšené SVG namiesto FontAwesome) ---
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+
+    localStorage.setItem("theme","light"); 
+    }
+}
+
+function loadTheme(){
+    let theme = localStorage.getItem("theme");
+    let icon = document.getElementById("themeIcon");
+
+    if(theme === "dark"){
+        document.body.classList.add("dark");
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+    } else {
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+    }
+}
+
+
+	// COOKIE LOGIKA + NAČÍTANIE GA
+        function loadAnalytics() {
+        if (window.gaLoaded) return;
+        window.gaLoaded = true;
+        let script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-RPTE5JJE14";
+        script.async = true;
+        document.head.appendChild(script);
+        
+script.onload = function() {
+    gtag('js', new Date());
+    gtag('config', 'G-RPTE5JJE14', {
+        'anonymize_ip': true
+    });
+};
+}
+
+
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+    gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+    });
+    loadAnalytics();
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'false');
+
+    gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+    });
+
+ document.getElementById('cookie-banner').style.display = 'none';
+}
+
+        document.addEventListener("DOMContentLoaded", function() {
+            autoLanguage();
+            loadTheme();
+           
+	    let consent = localStorage.getItem('cookieConsent');
+
+    if (consent === 'true') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+        });
+        loadAnalytics();
+    }
+    else if (consent === 'false') {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    else {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    document.body.classList.add("visible");
+});
+
+       
+/* HAMBURGER MENU */
+function toggleMenu() {
+            const menu = document.getElementById("navMenu");
+            const btn = document.getElementById("hamburgerBtn");
+            menu.classList.toggle("open");
+            btn.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+  <div id="cookie-banner">
+    <p data-sk>Tento web používa cookies na analýzu návštevnosti. Pomôžete nám tak tvoriť lepší obsah?</p>
+    <p data-en>This website uses cookies to analyze traffic. Help us create better content?</p>
+    <p data-de>Diese Website verwendet Cookies, um den Datenverkehr zu analysieren. Helfen Sie uns, bessere Inhalte zu erstellen?</p>
+
+    <button onclick="acceptCookies()">
+        <span data-sk>Súhlasím</span>
+        <span data-en>I Agree</span>
+        <span data-de>Ich stimme zu</span>
+    </button>
+
+    <button onclick="rejectCookies()" style="margin-left: 10px; background:transparent; border:1px solid #888; color: inherit;">
+        <span data-sk>Odmietnuť</span>
+        <span data-en>Reject</span>
+        <span data-de>Ablehnen</span>
+    </button>
+</div>
+
+
+    <header>
+    <div class="logo-container"> <div class="logo-text">🏆 The Grail List</div>
+        <h1 class="main-subtitle">
+            <span data-en class="show">Stories of Legendary Collectibles</span>
+            <span data-sk>Zberateľské legendy a ich príbehy</span>
+            <span data-de>Sammlerlegenden und ihre Geschichten</span>
+        </h1>
+
+        <div class="social-icons">
+
+    <div class="lang-switch">
+        <span onclick="setLanguage('en')">EN</span>
+        <span onclick="setLanguage('de')">DE</span>
+        <span onclick="setLanguage('sk')">SK</span>
+    </div>
+
+    <span class="divider">|</span>
+
+    <div class="theme-toggle" onclick="toggleDark()" id="themeIcon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </svg>
+</div>
+
+    <a href="https://www.facebook.com/profile.php?id=61583771206415" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/thegraillist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="mailto:thegraillist@gmail.com" title="thegraillist@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+    </header>
+
+    <nav class="main-nav">
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="menu-text">MENU</span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html"><span data-en>Home</span><span data-sk>Domov</span><span data-de>Startseite</span></a></li>
+            <li><a href="cards.html"><span data-en>Trading Cards</span><span data-sk>Zberateľské karty</span><span data-de>Sammelkarten</span></a></li>
+            <li><a href="comics.html"><span data-en>Comics & Art</span><span data-sk>Komiksy a umenie</span><span data-de>Comics & Kunst</span></a></li>
+            <li><a href="games.html"><span data-en>Video Games</span><span data-sk>Videohry</span><span data-de>Videospiele</span></a></li>
+            <li><a href="figures.html"><span data-en>Figures & Toys</span><span data-sk>Figúrky a hračky</span><span data-de>Figuren & Spielzeug</span></a></li>
+            <li><a href="fashion.html"><span data-en>Fashion & Luxury</span><span data-sk>Móda a luxus</span><span data-de>Mode & Luxus</span></a></li>
+            <li><a href="models.html"><span data-en>Die-Cast & Models</span><span data-sk>Modely a autíčka</span><span data-de>Die-Cast & Modelle</span></a></li>
+            <li><a href="historical.html"><span data-en>Historical & Rare</span><span data-sk>Historické a vzácne</span><span data-de>Historisch & Selten</span></a></li>
+            <li><a href="articles.html" class="active"><span data-en>Articles</span><span data-sk>Články</span><span data-de>Artikel</span></a></li>
+            <li><a href="community.html"><span data-en>Community Hub</span><span data-sk>Komunita</span><span data-de>Gemeinschaft</span></a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-text">
+
+    <div data-sk class="show">
+        <h1 class="gold-text" data-text="Články a AI ilustrácie">Články a AI ilustrácie</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Vstúpte do sveta dychberúcich príbehov, ktoré ukrývajú tie najvzácnejšie zberateľské kúsky. Aby sme vašej predstavivosti trocha pomohli, články dopĺňame AI ilustráciami. Nezabúdajte však, že ide len o ilustrácie – ten pravý lesk a duša originálnych predmetov sú v skutočnosti neprekonateľné.
+        </p>
+    </div>
+
+    <div data-en>
+        <h1 class="gold-text" data-text="Articles and AI Illustrations">Articles and AI Illustrations</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Step into a world of breathtaking stories hidden behind the rarest collectibles. To spark your imagination, we accompany our articles with AI-generated illustrations. However, please keep in mind that these are only artistic renditions – the true luster and soul of the original pieces are, in reality, unsurpassed.
+        </p>
+    </div>
+
+    <div data-de>
+        <h1 class="gold-text" data-text="Artikel und KI-Illustrationen">Artikel und KI-Illustrationen</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Tauchen Sie ein in die Welt atemberaubender Geschichten, die sich hinter den seltensten Sammlerstücken verbergen. Um Ihre Fantasie zu beflügeln, ergänzen wir unsere Artikel mit KI-Illustrationen. Bitte denken Sie jedoch daran, dass es sich nur um visuelle Darstellungen handelt – der wahre Glanz und die Seele der Originalobjekte sind in Wirklichkeit unübertroffen.
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+</section>
+
+        <div class="articles-grid">
+		<a href="2euro-grace-kelly.html" style="text-decoration: none; color: inherit;">
+    		<article class="article-card">
+        	<img src="img/2euro-grace-kelly.jpg" alt="2euro grace kelly" class="article-thumb">
+        	<div class="article-content">
+            	<span class="article-category">
+                <span data-en>Historical Collectibles</span>
+                <span data-sk class="show">Historické zberateľské predmety</span>
+                <span data-de>Historische Sammlerstücke</span>
+            </span>
+            
+            <span class="article-date">
+                <span data-en>March 27, 2026</span>
+                <span data-sk class="show">27. marca 2026</span>
+                <span data-de>27. März 2026</span>
+            </span>
+
+            <h3>
+                <span data-en>The €2 Coin Worth €4,000: The Story of Monaco’s Holy Grail</span>
+                <span data-sk>2 eurá s hodnotou 4 000 €: Príbeh svätého grálu z Monaka</span>
+                <span data-de>Die 2-Euro-Münze im Wert von 4.000 €: Die Geschichte vom „Heiligen Gral“ aus Monaco</span>
+            </h3>
+            <p>
+                <span data-en>Before Grace Kelly entered the world of royalty, she was an icon of the silver screen. She won an Oscar for The Country Girl and starred in legendary films by director Alfred Hitchcock.
+</span>
+                <span data-sk>Predtým, než Grace Kelly vstúpila do kráľovského sveta, bola ikonou filmového plátna. Získala Oscara za film The Country Girl a zahrala si aj v legendárnych snímkach režiséra Alfreda Hitchcocka.</span>
+                <span data-de>Bevor Grace Kelly die Welt des Adels betrat, war sie eine Ikone der Leinwand. Sie gewann einen Oscar für Ein Mädchen vom Lande und spielte in legendären Filmen von Regisseur Alfred Hitchcock mit.</span>
+            </p>
+        </div>
+    </article>
+</a> 
+
+                <a href="john-lennon-autograph.html" style="text-decoration: none; color: inherit;">
+    		<article class="article-card">
+        	<img src="img/john-lennon-autograph.jpg" alt="john lennon autograph" class="article-thumb">
+        	<div class="article-content">
+            	<span class="article-category">
+                <span data-en>Historical Collectibles</span>
+                <span data-sk class="show">Historické zberateľské predmety</span>
+                <span data-de>Historische Sammlerstücke</span>
+            </span>
+            
+            <span class="article-date">
+                <span data-en>March 27, 2026</span>
+                <span data-sk class="show">27. marca 2026</span>
+                <span data-de>27. März 2026</span>
+            </span>
+
+            <h3>
+                <span data-en>An Autograph for His Own Killer: The Chilling Story of a Million-Euro Souvenir</span>
+                <span data-sk>Autogram pre vlastného vraha: Príbeh mrazivého suveníru za takmer milión eur</span>
+                <span data-de>Ein Autograph für den eigenen Mörder: Die Geschichte eines schaurigen Souvenirs für fast eine Million Euro</span>
+            </h3>
+            <p>
+                <span data-en>It was Monday, December 8, 1980. John Lennon was leaving his apartment in the famous Dakota building in New York. On the sidewalk, he was stopped by an unassuming fan with glasses, holding the fresh album Lennon had just released.</span>
+                <span data-sk>Bol pondelok 8. decembra 1980. John Lennon vychádzal zo svojho bytu v slávnej budove Dakota v New Yorku. Na chodníku ho pristavil nenápadný fanúšik s okuliarmi a v rukách držal čerstvý album, ktorý Lennon práve vydal.</span>
+                <span data-de>Es war Montag, der 8. Dezember 1980. John Lennon verließ seine Wohnung im berühmten Dakota-Gebäude in New York. Auf dem Gehweg hielt ihn ein unscheinbarer Fan mit Brille an, der das frisch erschienene Album von Lennon in den Händen hielt.</span>
+            </p>
+        </div>
+    </article>
+</a> 
+
+                <a href="Patek-Philippe-Henry-Graves.html" style="text-decoration: none; color: inherit;">
+    		<article class="article-card">
+        	<img src="img/Patek-Philippe-Henry-Graves.jpg" alt="Patek Philippe Henry Graves Supercomplication" class="article-thumb">
+        	<div class="article-content">
+            	<span class="article-category">
+                <span data-en>Historical Collectibles</span>
+                <span data-sk class="show">Historické zberateľské predmety</span>
+                <span data-de>Historische Sammlerstücke</span>
+            </span>
+            
+            <span class="article-date">
+                <span data-en>March 24, 2026</span>
+                <span data-sk class="show">24. marca 2026</span>
+                <span data-de>24. März 2026</span>
+            </span>
+
+            <h3>
+                <span data-en>A Mechanical Universe for $24 Million: The Story of the World’s Most Complex Watch</span>
+                <span data-sk>Mechanický vesmír za 24 miliónov: Príbeh najzložitejších hodiniek sveta</span>
+                <span data-de>Ein mechanisches Universum für 24 Millionen: Die Geschichte der kompliziertesten Uhr der Welt</span>
+            </h3>
+            <p>
+                <span data-en>Its story is not just about time, but about obsession, massive egos, and billionaire wars.</span>
+                <span data-sk>Ich príbeh nie je len o čase, ale o posadnutosti, obrovskom egu a miliardárskych vojnách.</span>
+                <span data-de>Ihre Geschichte handelt nicht nur von der Zeit, sondern von Besessenheit, gigantischen Egos und Kriegen unter Milliardären.</span>
+            </p>
+        </div>
+    </article>
+</a> 
+
+
+                <a href="1933-Double-Eagle.html" style="text-decoration: none; color: inherit;">
+    		<article class="article-card">
+        	<img src="img/1933-double-eagle.jpg" alt="1933 Double Eagle" class="article-thumb">
+        	<div class="article-content">
+            	<span class="article-category">
+                <span data-en>Historical Collectibles</span>
+                <span data-sk class="show">Historické zberateľské predmety</span>
+                <span data-de>Historische Sammlerstücke</span>
+            </span>
+            
+            <span class="article-date">
+                <span data-en>March 19, 2026</span>
+                <span data-sk class="show">19. marca 2026</span>
+                <span data-de>19. März 2026</span>
+            </span>
+
+            <h3>
+                <span data-en>A Coin That Legally Doesn't Exist: The $19 Million Golden Ghost</span>
+                <span data-sk>Minca, ktorá legálne neexistuje: Príbeh zlatého prízraku za 19 miliónov</span>
+                <span data-de>Die Münze, die es legal nicht gibt: Die Geschichte des goldenen Phantoms für 19 Millionen</span>
+            </h3>
+            <p>
+                <span data-en>The Double Eagle is more than just a coin with a special 'license to exist.' It is a symbol of defiance, survived chaos, and proof that sometimes the greatest value lies in that which, by law, shouldn't even be.</span>
+                <span data-sk>Double Eagle nie je len mincou so špeciálnou „licenciou na existenciu“. Je to symbol vzdoru, prežitého chaosu a dôkaz, že niekedy má najväčšiu hodnotu práve to, čo by podľa zákona vôbec nemalo byť.</span>
+                <span data-de>Der Double Eagle ist mehr als nur eine Münze mit einer speziellen ‚Existenzlizenz‘. Er ist ein Symbol des Widerstands, des überlebten Chaos und der Beweis dafür, dass manchmal dasjenige den größten Wert hat, was es laut Gesetz gar nicht geben dürfte.</span>
+            </p>
+        </div>
+    </article>
+</a> 
+ 	
+<a href="theodore-hook-postcard.html" style="text-decoration: none; color: inherit;">
+    		<article class="article-card">
+        	<img src="img/theodore-hook.jpg" alt="Theodore Hook Postcard" class="article-thumb">
+        	<div class="article-content">
+            	<span class="article-category">
+                <span data-en>Historical Collectibles</span>
+                <span data-sk class="show">Historické zberateľské predmety</span>
+                <span data-de>Historische Sammlerstücke</span>
+            </span>
+            
+            <span class="article-date">
+                <span data-en>March 18, 2026</span>
+                <span data-sk class="show">18. marca 2026</span>
+                <span data-de>18. März 2026</span>
+            </span>
+
+            <h3>
+                <span data-en>A €42,000 Joke on the Postal Service: The Story of the World’s Oldest Postcard</span>
+                <span data-sk>Výsmech pošte za 42 000 €: Príbeh najstaršej pohľadnice sveta</span>
+                <span data-de>42.000 Euro für einen Scherz: Die Geschichte der ältesten Postkarte der Welt</span>
+            </h3>
+            <p>
+                <span data-en>In 1840, London writer Theodore Hook sent a postcard with a mocking drawing, unaware he was creating a valuable historical artifact.</span>
+                <span data-sk>Keď v roku 1840 poslal londýnsky spisovateľ Theodore Hook poštou kartón s posmešnou kresbou, netušil, že vytvára cenný historický dokument.</span>
+                <span data-de>Im Jahr 1840 verschickte der Londoner Schriftsteller Theodore Hook eine Postkarte mit einer spöttischen Zeichnung, ohne zu wissen, dass er ein wertvolles historisches Dokument erschuf.</span>
+            </p>
+        </div>
+    </article>
+</a> 
+
+<a href="kurt-cobain-guitar.html" style="text-decoration: none; color: inherit;">
+                <article class="article-card">
+                    <img src="img/cobain-unplugged.jpg" alt="Kurt Cobain Guitar" class="article-thumb">
+                    <div class="article-content">
+                        <span class="article-category">
+                            <span data-en>Music Memorabilia</span>
+                            <span data-sk class="show">Hudobné zberateľské predmety</span>
+                            <span data-de>Musik-Memorabilien</span>
+                        </span>
+                        
+                        <span class="article-date">
+                            <span data-en>March 13, 2026</span>
+                            <span data-sk class="show">13. marca 2026</span>
+                            <span data-de>13. März 2026</span>
+                        </span>
+
+                        <h3>
+                            <span data-en>The $6 Million Guitar: The Story of the World’s Most Expensive Instrument</span>
+                            <span data-sk>6 miliónov Dolárov za „nepodarok“: Príbeh najdrahšej gitary sveta</span>
+                            <span data-de>6 Millionen Dollar für einen „Ausschuss“: Die Geschichte der teuersten Gitarre der Welt</span>
+                        </h3>
+                        <p>
+                            <span data-en>Only a few were made, and the experiment went unnoticed. Three decades later, this outsider instrument was bought by a man who himself felt like an outsider – Kurt Cobain.</span>
+                            <span data-sk>Vyrobilo sa len pár kusov a experiment nikoho nezaujal. O tri desaťročia si tento outsiderský nástroj kúpil muž, ktorý sa sám cítil ako outsider – Kurt Cobain.</span>
+                            <span data-de>Es wurden nur wenige Exemplare hergestellt und das Experiment blieb unbeachtet. Drei Jahrzehnte später kaufte ein Mann, der sich selbst als Außenseiter fühlte, dieses Außenseiter-Instrument – Kurt Cobain.</span>
+                        </p>
+                    </div>
+                </article>
+            </a>
+
+
+            <article class="article-card" style="opacity: 0.8; cursor: default; filter: grayscale(20%); border: 1px dashed rgba(63, 93, 115, 0.2);">
+        <div style="position: relative;">
+            <img src="img/mystery-item.jpg" alt="Mystery Collector's Item" class="article-thumb">
+            <div style="position: absolute; top: 10px; right: 10px; background: #3f5d73; color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                <span data-en>Coming Soon</span>
+                <span data-sk class="show">Pripravujeme</span>
+                <span data-de>Demnächst</span>
+            </div>
+        </div>
+        <div class="article-content">
+            <div style="font-size: 11px; color: #999; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">
+                <span>??? •</span> 
+                <span data-en>April 2026</span><span data-sk class="show">Apríl 2026</span><span data-de>April 2026</span>
+            </div>
+            
+            <h3 style="color: #999; font-weight: 400; font-size: 20px;">
+                <span data-en>A New Mystery Unveiled Soon</span>
+                <span data-sk>Nové odhalenie už čoskoro</span>
+                <span data-de>Ein neues Rätsel in Kürze</span>
+            </h3>
+            <p style="color: #bbb; font-weight: 300; font-size: 15px; line-height: 1.5;">
+                <span data-en>We are preparing the story of another legendary collector's item. Stay tuned.</span>
+                <span data-sk>Odhalíme ďalší legendárny príbeh zo sveta zberateľstva. Zostaňte s nami.</span>
+                <span data-de>Wir bereiten die Geschichte eines weiteren legendären Sammlerstücks vor.</span>
+            </p>
+        </div>
+   </article>
+    </div> 
+
+</div>
+
+ <footer>
+        <div class="disclaimer">
+            <p>
+                <span class="warning-icon">⚠️</span>
+                <strong data-en>AI & Search Disclaimer:</strong>
+                <strong data-sk>Upozornenie AI a vyhľadávania:</strong>
+                <strong data-de>KI- und Suchhinweis:</strong>
+                
+                <span data-en>These rankings are generated by AI. Market prices fluctuate rapidly and <strong>all values are rounded for clarity</strong>. Search links are for reference only; results may show similar or illustrative items that do not match the exact specifications.</span>
+                <span data-sk>Tieto rebríčky sú generované AI. Ceny na trhu sa rýchlo menia a <strong>všetky sumy sú pre lepšiu prehľadnosť zaokrúhlené</strong>. Odkazy na vyhľadávanie sú len orientačné; výsledky môžu zobrazovať podobné alebo ilustračné predmety, ktoré nezodpovedajú presnej špecifikácii.</span>
+                <span data-de>Diese Ranglisten werden von KI erstellt. Marktpreise schwanken schnell und <strong>alle Beträge sind aus Gründen der Übersichtlichkeit gerundet</strong>. Suchlinks dienen nur als Referenz; die Ergebnisse können ähnliche oder illustrative Objekte zeigen, die nicht der genauen Spezifikation entsprechen.</span>
+            </p>
+            
+            <p data-en>This guide is for educational purposes only and does not constitute financial advice. Accuracy is not guaranteed.</p>
+            <p data-sk>Táto stránka slúži len na vzdelávacie účely a nepredstavuje finančné poradenstvo. Presnosť údajov nie je zaručená.</p>
+            <p data-de>Diese Seite dient nur zu Bildungszwecken und stellt keine Finanzberatung dar. Die Genauigkeit der Daten wird nicht garantiert.</p>
+            
+            <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
+        </div>
+    </footer>
+</body>
+</html>

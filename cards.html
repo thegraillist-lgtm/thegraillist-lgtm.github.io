@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+    });
+
+  </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Top 10 Most Valuable Trading Cards | The Grail List</title>
+    <meta name="description" content="Discover the ultimate collection of the world's most valuable trading cards: Pokémon, Yu-Gi-Oh!, Magic, Lorcana, One Piece, and more. Updated market prices for elite collectors.">
+    <meta name="keywords" content="trading cards, expensive pokemon cards, yu-gi-oh rarities, magic the gathering, lorcana cards, one piece card game, card collecting guide">
+    <meta name="author" content="The Grail List">
+    <link rel="canonical" href="https://thegraillist.com/cards.html">
+   
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Top 10 Most Valuable Trading Cards 2026 | The Grail List">
+    <meta property="og:description" content="Explore the ultimate list of the world's most valuable trading cards in 2026. Pokémon, Yu-Gi-Oh!, Lorcana and more with updated prices.">
+    <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
+    <meta property="og:url" content="https://thegraillist.com/cards.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Top 10 Most Valuable Trading Cards 2026">
+    <meta name="twitter:description" content="From Pikachu to Blue-Eyes White Dragon, discover the most valuable trading cards this year. Updated collector prices for 2026.">
+    <meta name="twitter:image" content="https://thegraillist.com/img/main-preview.jpg">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <style>
+        /* Štýl pre cookie lištu prispôsobený vášmu webu */
+        #cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background: #d8d1be;
+            color: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            z-index: 9999;
+            display: none;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #eee;
+        }
+        #cookie-banner button {
+            background: #3f5d73;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        #cookie-banner button:hover {
+            background: #0056b3;
+        }
+        body.dark #cookie-banner {
+            background: #121212;      /* ČIERNA */
+            color: white;             /* BIELY TEXT */
+            border-color: #333; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    </style>
+    
+    <script>
+        function setLanguage(lang){
+            localStorage.setItem("lang", lang);
+            document.querySelectorAll("[data-en], [data-sk], [data-de]").forEach(el => {
+                el.classList.remove("show");
+            });
+            document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+                el.classList.add("show");
+            });
+        }
+        function autoLanguage(){
+            let saved = localStorage.getItem("lang");
+            if(saved){setLanguage(saved);return;}
+            let lang = navigator.language;
+            if(lang.startsWith("sk")) setLanguage("sk");
+            else if(lang.startsWith("de")) setLanguage("de");
+            else setLanguage("en");
+        }
+        function toggleDark(){
+    document.body.classList.toggle("dark");
+    let icon = document.getElementById("themeIcon");
+
+    if(document.body.classList.contains("dark")){
+        // --- SLNKO (Zväčšené na 24px) ---
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+        localStorage.setItem("theme","dark");
+    } else {
+        // --- MESIAC (Zväčšené SVG namiesto FontAwesome) ---
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+
+    localStorage.setItem("theme","light"); 
+    }
+}
+
+function loadTheme(){
+    let theme = localStorage.getItem("theme");
+    let icon = document.getElementById("themeIcon");
+
+    if(theme === "dark"){
+        document.body.classList.add("dark");
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+    } else {
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+    }
+}
+
+
+       // COOKIE LOGIKA + NAČÍTANIE GA
+        function loadAnalytics() {
+        if (window.gaLoaded) return;
+        window.gaLoaded = true;
+        let script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-RPTE5JJE14";
+        script.async = true;
+        document.head.appendChild(script);
+        
+script.onload = function() {
+    gtag('js', new Date());
+    gtag('config', 'G-RPTE5JJE14', {
+        'anonymize_ip': true
+    });
+};
+}
+
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+    gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+    });
+    loadAnalytics();
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+     
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'false');
+
+    gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+    });
+
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    autoLanguage();
+    loadTheme();
+    formatPrices();
+
+    let consent = localStorage.getItem('cookieConsent');
+
+    if (consent === 'true') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+        });
+        loadAnalytics();
+    }
+    else if (consent === 'false') {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    else {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    document.body.classList.add("visible");
+});
+        function formatPrices() {
+            const cells = document.querySelectorAll('td:last-child');
+            cells.forEach(cell => {
+                let text = cell.innerText;
+                let parts = text.split('/');
+                const expand = (val) => {
+                    let num = parseFloat(val.replace(/[^0-9.]/g, ''));
+                    let multiplier = val.includes('M') ? 1000000 : (val.includes('K') ? 1000 : 1);
+                    return Math.floor(num * multiplier).toLocaleString('sk-SK');
+                };
+                if (parts.length === 2) {
+                    let usd = expand(parts[0].trim());
+                    let eur = expand(parts[1].trim());
+                    cell.innerHTML = `
+                        <div class="usd">$ ${usd}</div>
+                        <div class="eur">€ ${eur}</div>
+                    `;
+                }
+            });
+        }
+
+/* HAMBURGER MENU */
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    const btn = document.getElementById("hamburgerBtn");
+
+    menu.classList.toggle("open");
+    btn.classList.toggle("active");
+}
+
+    </script>
+</head>
+<body>
+    <div id="cookie-banner">
+    <p data-sk>Tento web používa cookies na analýzu návštevnosti. Pomôžete nám tak tvoriť lepší obsah?</p>
+    <p data-en>This website uses cookies to analyze traffic. Help us create better content?</p>
+    <p data-de>Diese Website verwendet Cookies, um den Datenverkehr zu analysieren. Helfen Sie uns, bessere Inhalte zu erstellen?</p>
+
+    <button onclick="acceptCookies()">
+        <span data-sk>Súhlasím</span>
+        <span data-en>I Agree</span>
+        <span data-de>Ich stimme zu</span>
+    </button>
+
+    <button onclick="rejectCookies()" style="margin-left: 10px; background:transparent; border:1px solid #888; color: inherit;">
+        <span data-sk>Odmietnuť</span>
+        <span data-en>Reject</span>
+        <span data-de>Ablehnen</span>
+    </button>
+</div>
+
+
+    <header>
+    <div class="logo-container"> <div class="logo-text">🏆 The Grail List</div>
+        <h1 class="main-subtitle">
+            <span data-en class="show">Most Valuable Trading Cards & Rare TCG Grails</span>
+            <span data-sk>Najcennejšie zberateľské karty a vzácne TCG grály</span>
+            <span data-de>Die wertvollsten Sammelkarten & seltene TCG-Grale</span>
+        </h1>
+    </div>
+
+        <div class="social-icons">
+
+    <div class="lang-switch">
+        <span onclick="setLanguage('en')">EN</span>
+        <span onclick="setLanguage('de')">DE</span>
+        <span onclick="setLanguage('sk')">SK</span>
+    </div>
+
+    <span class="divider">|</span>
+
+    <div class="theme-toggle" onclick="toggleDark()" id="themeIcon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </svg>
+</div>
+
+    <a href="https://www.facebook.com/profile.php?id=61583771206415" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/thegraillist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="mailto:thegraillist@gmail.com" title="thegraillist@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+
+    </header>
+
+    <nav class="main-nav">
+
+<button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="menu-text">MENU</span>
+</button>
+
+
+<ul id="navMenu">
+            <li><a href="index.html"><span data-en>Home</span><span data-sk>Domov</span><span data-de>Startseite</span></a></li>
+            <li><a href="cards.html" class="active"><span data-en>Trading Cards</span><span data-sk>Zberateľské karty</span><span data-de>Sammelkarten</span></a></li>
+            <li><a href="comics.html"><span data-en>Comics & Art</span><span data-sk>Komiksy a umenie</span><span data-de>Comics & Kunst</span></a></li>
+            <li><a href="games.html"><span data-en>Video Games</span><span data-sk>Videohry</span><span data-de>Videospiele</span></a></li>
+            <li><a href="figures.html"><span data-en>Figures & Toys</span><span data-sk>Figúrky a hračky</span><span data-de>Figuren & Spielzeug</span></a></li>
+            <li><a href="fashion.html"><span data-en>Fashion & Luxury</span><span data-sk>Móda a luxus</span><span data-de>Mode & Luxus</span></a></li>
+            <li><a href="models.html"><span data-en>Die-Cast & Models</span><span data-sk>Modely a autíčka</span><span data-de>Die-Cast & Modelle</span></a></li>
+            <li><a href="historical.html"><span data-en>Historical & Rare</span><span data-sk>Historické a vzácne</span><span data-de>Historisch & Selten</span></a></li>
+	    <li><a href="articles.html"><span data-en>Articles</span><span data-sk>Články</span><span data-de>Artikel</span></a></li>
+            <li><a href="community.html"><span data-en>Community Hub</span><span data-sk>Komunita</span><span data-de>Gemeinschaft</span></a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-text">
+
+    <div data-sk class="show">
+        <h1 class="gold-text" data-text="Zberateľské karty">Zberateľské karty</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Svet, kde sa spomienky z detstva menia na lukratívne investície. Či už hľadáte ikonické kúsky od Pokémon a Magic: The Gathering, alebo vzácne športové karty, ktoré písali históriu, ste na správnom mieste. Ponorte sa do prehľadov kariet, ktoré vďaka svojej vzácnosti dosahujú rekordné sumy. Pokémonov a Magic nájdete na hlavnej stránke.
+        </p>
+    </div>
+
+    <div data-en>
+        <h1 class="gold-text" data-text="Trading Cards">Trading Cards</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            A world where childhood memories turn into lucrative investments. Whether you are looking for iconic pieces from Pokémon and Magic: The Gathering, or rare sports cards that made history, you are in the right place. Dive into our overviews of cards that reach record-breaking prices due to their rarity. Pokémon and Magic can be found on the main page.
+        </p>
+    </div>
+
+    <div data-de>
+        <h1 class="gold-text" data-text="Sammelkarten">Sammelkarten</h1>
+        <p style="font-weight: 400; line-height: 1.5; font-size: 16px; max-width: 1100px; margin: 5px auto 0 auto;">
+            Eine Welt, in der Kindheitserinnerungen zu lukrativen Investitionen werden. Ob Sie nun ikonische Stücke von Pokémon und Magic: The Gathering oder seltene Sportkarten suchen, die Geschichte geschrieben haben – hier sind Sie richtig. Tauchen Sie ein in unsere Übersichten von Karten, die aufgrund ihrer Seltenheit Rekordsummen erzielen. Pokémon und Magic finden Sie auf der Hauptseite.
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+</section>
+
+
+
+
+    <div class="grid">
+         <div class="card pokemon">
+            <h2><span data-en>Disney Lorcana</span><span data-sk>Disney Lorcana</span><span data-de>Disney Lorcana</span></h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Elsa+Spirit+of+Winter+Enchanted+PSA+10">Elsa - Spirit of Winter (Enchanted PSA 10)</a></td><td>$1.4K / €1.3K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mickey+Mouse+Brave+Little+Tailor+Enchanted+PSA+10">Mickey Mouse - Brave Little Tailor (Enchanted PSA 10)</a></td><td>$1.1K / €1.0K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Stitch+Carefree+Surfer+Enchanted+PSA+10">Stitch - Carefree Surfer (Enchanted PSA 10)</a></td><td>$950 / €870</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Belle+Strange+but+Special+Enchanted+PSA+10">Belle - Strange but Special (Enchanted PSA 10)</a></td><td>$880 / €810</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Maleficent+Monstrous+Dragon+Enchanted+PSA+10">Maleficent - Monstrous Dragon (Enchanted PSA 10)</a></td><td>$780 / €720</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Rapunzel+Gifted+with+Healing+Enchanted+PSA+10">Rapunzel - Gifted with Healing (Enchanted PSA 10)</a></td><td>$720 / €660</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Tinker+Bell+Giant+Fairy+Enchanted+PSA+10">Tinker Bell - Giant Fairy (Enchanted PSA 10)</a></td><td>$680 / €620</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Genie+On+the+Job+Enchanted+PSA+10">Genie - On the Job (Enchanted PSA 10)</a></td><td>$620 / €570</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Simba+Returned+King+Enchanted+PSA+10">Simba - Returned King (Enchanted PSA 10)</a></td><td>$580 / €530</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Ursula+Sea+Witch+Queen+Enchanted+PSA+10">Ursula - Sea Witch Queen (Enchanted PSA 10)</a></td><td>$550 / €500</td></tr>
+            </table>
+        </div>
+
+        <div class="card comics">
+            <h2><span data-en>Star Wars Unlimited</span><span data-sk>Star Wars Unlimited</span><span data-de>Star Wars Unlimited</span></h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Darth+Vader+Emblem+PSA+10+Star+Wars+Unlimited">Darth Vader - Emblem (PSA 10)</a></td><td>$2.5K / €2.3K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Luke+Skywalker+Showcase+PSA+10+Star+Wars+Unlimited">Luke Skywalker Showcase (PSA 10)</a></td><td>$1.8K / €1.6K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Boba+Fett+Showcase+PSA+10+Star+Wars+Unlimited">Boba Fett Showcase (PSA 10)</a></td><td>$1.5K / €1.4K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Emperor+Palpatine+Showcase+PSA+10+Star+Wars+Unlimited">Emperor Palpatine Showcase (PSA 10)</a></td><td>$1.3K / €1.2K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Darth+Maul+Showcase+PSA+10+Star+Wars+Unlimited">Darth Maul Showcase (PSA 10)</a></td><td>$1.1K / €1K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Leia+Organa+Showcase+PSA+10+Star+Wars+Unlimited">Leia Organa Showcase (PSA 10)</a></td><td>$980 / €900</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Obi-Wan+Kenobi+Showcase+PSA+10+Star+Wars+Unlimited">Obi-Wan Kenobi Showcase (PSA 10)</a></td><td>$920 / €850</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Han+Solo+Showcase+PSA+10+Star+Wars+Unlimited">Han Solo Showcase (PSA 10)</a></td><td>$880 / €810</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Yoda+Showcase+PSA+10+Star+Wars+Unlimited">Yoda Showcase (PSA 10)</a></td><td>$820 / €760</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Kylo+Ren+Showcase+PSA+10+Star+Wars+Unlimited">Kylo Ren Showcase (PSA 10)</a></td><td>$780 / €720</td></tr>
+            </table>
+        </div>
+
+        <div class="card retro-video-games">
+            <h2><span data-en>Yu-Gi-Oh!</span><span data-sk>Yu-Gi-Oh!</span><span data-de>Yu-Gi-Oh!</span></h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Blue-Eyes+White+Dragon+LOB+1st+Edition+PSA+10">Blue-Eyes White Dragon (LOB 1st Ed PSA 10)</a></td><td>$85K / €78K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Tyler+the+Great+Warrior+Yu-Gi-Oh+PSA+10">Tyler the Great Warrior (PSA 10)</a></td><td>$75K / €69K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Black+Luster+Soldier+Stainless+Steel+Tournament+Prize">Black Luster Soldier (Tournament Prize)</a></td><td>$50K / €46K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Dark+Magician+Girl+MFC+1st+Edition+PSA+10">Dark Magician Girl (MFC 1st Ed PSA 10)</a></td><td>$30K / €27K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Red-Eyes+Black+Dragon+LOB+1st+Edition+PSA+10">Red-Eyes Black Dragon (LOB 1st Ed PSA 10)</a></td><td>$25K / €23K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Exodia+the+Forbidden+One+LOB+1st+Edition+PSA+10">Exodia the Forbidden One (LOB 1st Ed PSA 10)</a></td><td>$18K / €16K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Cyber-Stein+SJC+PSA+10">Cyber-Stein (SJC Prize PSA 10)</a></td><td>$15K / €13K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Crush+Card+Virus+SJC+PSA+10">Crush Card Virus (SJC Prize PSA 10)</a></td><td>$12K / €11K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Dark+Magician+LOB+1st+Edition+PSA+10">Dark Magician (LOB 1st Ed PSA 10)</a></td><td>$10K / €9K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Summoned+Skull+MRD+1st+Edition+PSA+10">Summoned Skull (MRD 1st Ed PSA 10)</a></td><td>$8K / €7K</td></tr>
+            </table>
+        </div>
+
+         <div class="card lego">
+            <h2><span data-en>Dragon Ball Super</span><span data-sk>Dragon Ball Super</span><span data-de>Dragon Ball Super</span></h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Son+Goku+Hope+of+Universe+GDR+PSA+10">Son Goku - Hope of Universe (God Rare PSA 10)</a></td><td>$1.5K / €1.4K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Son+Goku+The+Awakened+Power+SCR+PSA+10">Son Goku - The Awakened Power (PSA 10)</a></td><td>$1.4K / €1.3K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Vegeta+Unbridled+Power+GDR+PSA+10">Vegeta - Unbridled Power (God Rare PSA 10)</a></td><td>$1.2K / €1.1K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Broly+Legendary+Super+Saiyan+Distant+Visitor+PSA+10">Broly - Legendary Super Saiyan (PSA 10)</a></td><td>$1.1K / €1K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Gogeta+Hero+Revived+GDR+PSA+10">Gogeta - Hero Revived (God Rare PSA 10)</a></td><td>$980 / €900</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Son+Gohan+Beast+Ultimate+Rare+PSA+10">Son Gohan Beast (PSA 10)</a></td><td>$920 / €850</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Vegito+Warrior+from+Another+Dimension+PSA+10">Vegito - Warrior from Another Dimension (PSA 10)</a></td><td>$880 / €810</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Frieza+Emperor+of+Universe+GDR+PSA+10">Frieza - Emperor of Universe (God Rare PSA 10)</a></td><td>$820 / €760</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Android+17+Protector+of+Wildlife+PSA+10">Android 17 - Protector (PSA 10)</a></td><td>$780 / €720</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Beerus+God+of+Destruction+GDR+PSA+10">Beerus - God of Destruction (God Rare PSA 10)</a></td><td>$720 / €660</td></tr>
+            </table>
+        </div>
+
+        <div class="card sneakers">
+            <h2><span data-en>One Piece Card Game</span><span data-sk>One Piece karty</span><span data-de>One Piece Karten</span></h2>
+            <table>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Portgas+D+Ace+Manga+Alt+Art+PSA+10">Portgas D. Ace (Manga Alt Art PSA 10)</a></td><td>$3K / €2.8K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Monkey+D+Luffy+Gear+5+Manga+PSA+10">Monkey D. Luffy (Gear 5 Manga PSA 10)</a></td><td>$2.8K / €2.6K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Roronoa+Zoro+Manga+PSA+10">Roronoa Zoro (Manga PSA 10)</a></td><td>$2.4K / €2.2K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Shanks+Manga+PSA+10">Shanks (Manga PSA 10)</a></td><td>$2.2K / €2K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Trafalgar+Law+Manga+PSA+10">Trafalgar Law (Manga PSA 10)</a></td><td>$2K / €1.8K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Boa+Hancock+Manga+PSA+10">Boa Hancock (Manga PSA 10)</a></td><td>$1.9K / €1.7K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Sabo+Manga+PSA+10">Sabo (Manga PSA 10)</a></td><td>$1.7K / €1.6K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Nico+Robin+Flagship+Promo+PSA+10">Nico Robin (Alt Art / Flagship PSA 10)</a></td><td>$1.5K / €1.4K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Yamato+SEC+Alt+Art+PSA+10">Yamato (SEC Alt Art PSA 10)</a></td><td>$1.3K / €1.2K</td></tr>
+                <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Kaido+Flagship+Promo+PSA+10">Kaido (Alt Art / Flagship PSA 10)</a></td><td>$1.2K / €1.1K</td></tr>
+            </table>
+        </div>
+
+    </div>
+
+  <footer>
+        <div class="disclaimer">
+            <p>
+                <span class="warning-icon">⚠️</span>
+                <strong data-en>AI & Search Disclaimer:</strong>
+                <strong data-sk>Upozornenie AI a vyhľadávania:</strong>
+                <strong data-de>KI- und Suchhinweis:</strong>
+                
+                <span data-en>These rankings are generated by AI. Market prices fluctuate rapidly and <strong>all values are rounded for clarity</strong>. Search links are for reference only; results may show similar or illustrative items that do not match the exact specifications.</span>
+                <span data-sk>Tieto rebríčky sú generované AI. Ceny na trhu sa rýchlo menia a <strong>všetky sumy sú pre lepšiu prehľadnosť zaokrúhlené</strong>. Odkazy na vyhľadávanie sú len orientačné; výsledky môžu zobrazovať podobné alebo ilustračné predmety, ktoré nezodpovedajú presnej špecifikácii.</span>
+                <span data-de>Diese Ranglisten werden von KI erstellt. Marktpreise schwanken schnell und <strong>alle Beträge sind aus Gründen der Übersichtlichkeit gerundet</strong>. Suchlinks dienen nur als Referenz; die Ergebnisse können ähnliche oder illustrative Objekte zeigen, die nicht der genauen Spezifikation entsprechen.</span>
+            </p>
+            
+            <p data-en>This guide is for educational purposes only and does not constitute financial advice. Accuracy is not guaranteed.</p>
+            <p data-sk>Táto stránka slúži len na vzdelávacie účely a nepredstavuje finančné poradenstvo. Presnosť údajov nie je zaručená.</p>
+            <p data-de>Diese Seite dient nur zu Bildungszwecken und stellt keine Finanzberatung dar. Die Genauigkeit der Daten wird nicht garantiert.</p>
+            
+            <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
+        </div>
+    </footer>
+</body>
+</html>

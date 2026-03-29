@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// DEFAULT (vždy denied pri prvom načítaní)
+gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+});
+</script>
+
+<script>
+function loadAnalytics() {
+    if (window.gaLoaded) return;
+    window.gaLoaded = true;
+
+    let script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-RPTE5JJE14";
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-RPTE5JJE14', {
+            'anonymize_ip': true
+        });
+    };
+}
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Most Valuable Collectibles 2026 | Guide & Rankings | thegraillist.com</title>
+    <meta name="description" content="Ultimate guide to the most expensive collectibles in 2026. Discover rankings for Pokémon cards, rare comics, LEGO and luxury watches on thegraillist.com.">
+    <meta name="keywords" content="thegraillist, collectibles, rare items, most expensive cards, pokemon, lego deals, luxury watches, comic books, grail list, investment">
+    <meta name="author" content="The Grail List">
+    <link rel="canonical" href="https://thegraillist.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Grail List">
+    <meta property="og:title" content="The Grail List: Top 10 Most Valuable Collectibles">
+    <meta property="og:description" content="Discover what makes a 'Grail'. From Pikachu Illustrator to Action Comics #1, see the world's elite collectibles.">
+    <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
+    <meta property="og:url" content="https://thegraillist.com/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="World's Most Expensive Collectibles | 2026 Guide">
+    <meta name="twitter:description" content="Explore the definitive Top 10 lists for serious collectors across all categories.">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Štýl pre cookie lištu prispôsobený vášmu webu */
+        #cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background: #d8d1be;
+            color: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            z-index: 9999;
+            display: none;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #eee;
+        }
+        #cookie-banner button {
+            background: #3f5d73;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        #cookie-banner button:hover {
+            background: #0056b3;
+        }
+        body.dark #cookie-banner {
+            background: #121212;      /* ČIERNA */
+            color: white;             /* BIELY TEXT */
+            border-color: #333; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    </style>
+
+    <script>
+
+
+
+       function setLanguage(lang){
+    localStorage.setItem("lang", lang);
+    document.querySelectorAll("[data-en], [data-sk], [data-de]").forEach(el => {
+        el.classList.remove("show");
+    });
+    document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+        el.classList.add("show");
+    });
+}
+
+function autoLanguage(){
+    let saved = localStorage.getItem("lang");
+    if(saved){
+        setLanguage(saved);
+        return;
+    }
+    let lang = navigator.language;
+    if(lang.startsWith("sk")) setLanguage("sk");
+    else if(lang.startsWith("de")) setLanguage("de");
+    else setLanguage("en");
+}
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+    let icon = document.getElementById("themeIcon");
+
+    if(document.body.classList.contains("dark")){
+        // --- SLNKO (Zväčšené na 24px) ---
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+        localStorage.setItem("theme","dark");
+    } else {
+        // --- MESIAC (Zväčšené SVG namiesto FontAwesome) ---
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+
+   localStorage.setItem("theme","light"); 
+    }
+}
+
+function loadTheme(){
+    let theme = localStorage.getItem("theme");
+    let icon = document.getElementById("themeIcon");
+
+    if(theme === "dark"){
+        document.body.classList.add("dark");
+        icon.innerHTML = `
+<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <circle cx="12" cy="12" r="10"></circle>
+</svg>`;
+    } else {
+        icon.innerHTML = `
+<svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>`;
+    }
+}
+/* COOKIE */
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+
+    gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+    });
+
+    loadAnalytics();
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'false');
+
+    // Explicitne potvrdíme denied (dobré pre Consent Mode v2)
+    gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+    });
+
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Tvoje pôvodné funkcie
+    autoLanguage();
+    loadTheme();
+    formatPrices();
+
+    let consent = localStorage.getItem('cookieConsent');
+
+    if (consent === 'true') {
+        // KRITICKÝ KROK: Ak už súhlas existuje, musíme najprv poslať UPDATE a potom loadnúť script
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+        });
+        loadAnalytics();
+        document.getElementById('cookie-banner').style.display = 'none';
+    } 
+    else if (consent === 'false') {
+        // Ak odmietol, banner už neotravuje
+        document.getElementById('cookie-banner').style.display = 'none';
+    } 
+    else {
+        // Prvá návšteva (null)
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    document.body.classList.add("visible");
+});
+
+function formatPrices() {
+    const cells = document.querySelectorAll('td:last-child');
+    cells.forEach(cell => {
+        let text = cell.innerText;
+        let parts = text.split('/');
+
+        const expand = (val) => {
+            let num = parseFloat(val.replace(/[^0-9.]/g, ''));
+            let multiplier = val.includes('M') ? 1000000 : (val.includes('K') ? 1000 : 1);
+            return Math.floor(num * multiplier).toLocaleString('sk-SK');
+        };
+
+        if (parts.length === 2) {
+            let usd = expand(parts[0].trim());
+            let eur = expand(parts[1].trim());
+            cell.innerHTML = `
+                <div class="usd">$ ${usd}</div>
+                <div class="eur">€ ${eur}</div>
+            `;
+        }
+    });
+}
+
+/* HAMBURGER MENU */
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    const btn = document.getElementById("hamburgerBtn");
+
+    menu.classList.toggle("open");
+    btn.classList.toggle("active");
+}
+    </script>
+</head>
+<body>
+   <div id="cookie-banner">
+    <p data-sk>Tento web používa cookies na analýzu návštevnosti. Pomôžete nám tak tvoriť lepší obsah?</p>
+    <p data-en>This website uses cookies to analyze traffic. Help us create better content?</p>
+    <p data-de>Diese Website verwendet Cookies, um den Datenverkehr zu analysieren. Helfen Sie uns, bessere Inhalte zu erstellen?</p>
+
+    <button onclick="acceptCookies()">
+        <span data-sk>Súhlasím</span>
+        <span data-en>I Agree</span>
+        <span data-de>Ich stimme zu</span>
+    </button>
+
+    <button onclick="rejectCookies()" style="margin-left: 10px; background:transparent; border:1px solid #888; color: inherit;">
+        <span data-sk>Odmietnuť</span>
+        <span data-en>Reject</span>
+        <span data-de>Ablehnen</span>
+    </button>
+</div>
+        <header>
+    <div class="logo-container"> <div class="logo-text">🏆 The Grail List</div>
+        <h1 class="main-subtitle">
+            <span data-en class="show">The Ultimate Guide to World's Rarest Collectibles</span>
+            <span data-sk>Váš sprievodca najvzácnejšími zberateľskými kúskami</span>
+            <span data-de>Der Guide zu den seltensten Sammlerstücken</span>
+        </h1>
+    </div>
+    
+       <div class="social-icons">
+
+    <div class="lang-switch">
+        <span onclick="setLanguage('en')">EN</span>
+        <span onclick="setLanguage('de')">DE</span>
+        <span onclick="setLanguage('sk')">SK</span>
+    </div>
+
+    <span class="divider">|</span>
+
+    <div class="theme-toggle" onclick="toggleDark()" id="themeIcon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2"></path>
+      <path d="M12 20v2"></path>
+      <path d="m4.93 4.93 1.41 1.41"></path>
+      <path d="m17.66 17.66 1.41 1.41"></path>
+      <path d="M2 12h2"></path>
+      <path d="M20 12h2"></path>
+      <path d="m6.34 17.66-1.41 1.41"></path>
+      <path d="m19.07 4.93-1.41 1.41"></path>
+    </svg>
+</div>
+
+    <a href="https://www.facebook.com/profile.php?id=61583771206415" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/thegraillist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="mailto:thegraillist@gmail.com" title="thegraillist@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+
+
+    </header>
+    <nav class="main-nav">
+
+<button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="menu-text">MENU</span>
+</button>
+
+<ul id="navMenu">
+
+        
+            <li><a href="index.html" class="active"><span data-en>Home</span><span data-sk>Domov</span><span data-de>Startseite</span></a></li>
+            <li><a href="cards.html"><span data-en>Trading Cards</span><span data-sk>Zberateľské karty</span><span data-de>Sammelkarten</span></a></li>
+            <li><a href="comics.html"><span data-en>Comics & Art</span><span data-sk>Komiksy a umenie</span><span data-de>Comics & Kunst</span></a></li>
+            <li><a href="games.html"><span data-en>Video Games</span><span data-sk>Videohry</span><span data-de>Videospiele</span></a></li>
+            <li><a href="figures.html"><span data-en>Figures & Toys</span><span data-sk>Figúrky a hračky</span><span data-de>Figuren & Spielzeug</span></a></li>
+            <li><a href="fashion.html"><span data-en>Fashion & Luxury</span><span data-sk>Móda a luxus</span><span data-de>Mode & Luxus</span></a></li>
+            <li><a href="models.html"><span data-en>Die-Cast & Models</span><span data-sk>Modely a autíčka</span><span data-de>Die-Cast & Modelle</span></a></li>
+            <li><a href="historical.html"><span data-en>Historical & Rare</span><span data-sk>Historické a vzácne</span><span data-de>Historisch & Selten</span></a></li>
+	    <li><a href="articles.html"><span data-en>Articles</span><span data-sk>Články</span><span data-de>Artikel</span></a></li>
+            <li><a href="community.html"><span data-en>Community Hub</span><span data-sk>Komunita</span><span data-de>Gemeinschaft</span></a></li>
+        </ul>
+   </nav>
+
+<section class="intro-text">
+
+    <h1 data-sk class="gold-text" data-text="Vitajte v centre zberateľov">
+        Vitajte v centre zberateľov
+    </h1>
+    <p data-sk>
+        Objavte najhodnotnejšie predmety naprieč všetkými kategóriami – od vzácnych historických artefaktov až po ikonické Pokémon karty. Za ich vysokou cenou sa takmer vždy skrýva strhujúci príbeh. Tie najviac fascinujúce príbehy nájdete v sekcii články.
+    </p>
+
+    <h1 data-en class="gold-text" data-text="Welcome to the Ultimate Collector's Hub">
+        Welcome to the Ultimate Collector's Hub
+    </h1>
+    <p data-en>
+        Discover the most valuable items across all categories – from rare historical artifacts to iconic Pokémon cards. Behind their high price, there is almost always a gripping story. You can find the most fascinating of these stories in our Articles section.
+    </p>
+
+    <h1 data-de class="gold-text" data-text="Willkommen im zentralen Sammler-Hub">
+        Willkommen im zentralen Sammler-Hub
+    </h1>
+    <p data-de>
+        Entdecken Sie die wertvollsten Objekte aus allen Kategorien – von seltenen historischen Artefakten bis hin zu ikonischen Pokémon-Karten. Hinter ihrem hohen Preis verbirgt sich fast immer eine packende Geschichte. Die faszinierendsten dieser Geschichten finden Sie in der Rubrik Artikel.
+    </p>
+
+    <div class="divider"></div>
+
+</section>
+
+    <div class="grid">
+    <div class="card pokemon">
+        <h2><span data-en>Pokemon Cards</span><span data-sk>Pokémon karty</span><span data-de>Pokémon Karten</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Pikachu+Illustrator+PSA+10+Goldin+2026">Pikachu Illustrator (PSA 10)</a></td><td>$16.49M / €15.2M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Charizard+1st+Edition+PSA+10+Shadowless">Charizard 1st Edition (PSA 10)</a></td><td>$954K / €880K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Trophy+Pikachu+No.+1+Trainer+1997">Trophy Pikachu No. 1 (Promo)</a></td><td>$450K / €415K</td></tr>
+<tr class="partner-row" onclick="window.location.href='mailto:thegraillist@gmail.com'">
+    <td colspan="2" style="padding: 20px 15px;">
+        <div class="promo-link">
+            <span data-en>Your shop here &raquo;</span>
+            <span data-sk>Váš obchod tu &raquo;</span>
+            <span data-de>Ihr Shop hier &raquo;</span>
+        </div>
+        <div class="promo-email">
+            contact: thegraillist<span style="display:none">remove</span>@gmail.com
+        </div>
+    </td>
+</tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Blastoise+Commissioned+Presentation+Galaxy+Star+Holo">Blastoise Prototype / Commissioned</a></td><td>$360K / €330K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Ishihara+GX+Signed+Pokemon+Card">Ishihara GX Promo (Signed)</a></td><td>$250K / €230K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Umbreon+Gold+Star+PSA+10+Holon+Phantoms">Umbreon Gold Star (PSA 10)</a></td><td>$180K / €165K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Kangaskhan+Family+Event+Trophy+Card+1998">Kangaskhan Trophy (Promo)</a></td><td>$175K / €160K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Lugia+1st+Edition+Neo+Genesis+PSA+10">Lugia 1st Edition (PSA 10)</a></td><td>$150K / €138K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Rayquaza+Gold+Star+PSA+10+Ex+Deoxys">Rayquaza Gold Star (PSA 10)</a></td><td>$100K / €92K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Trophy+Pikachu+No.+3+Trainer+1997">Trophy Pikachu No. 3 (Promo)</a></td><td>$80K / €74K</td></tr>
+        </table>
+    </div>
+
+    <div class="card comics">
+        <h2><span data-en>Comics</span><span data-sk>Komiksy</span><span data-de>Comics</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Action+Comics+1+CGC+9.0+15+million">Action Comics #1 (CGC 9.0)</a></td><td>$15.0M / €13.8M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Superman+1+CGC+9.0+9+million">Superman #1 (CGC 9.0)</a></td><td>$9.12M / €8.4M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Batman+1+CGC+9.4+6+million">Batman #1 (CGC 9.4)</a></td><td>$6.0M / €5.5M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Amazing+Fantasy+15+CGC+9.6">Amazing Fantasy #15 (CGC 9.6)</a></td><td>$3.6M / €3.3M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Captain+America+Comics+1+CGC+9.4">Captain America #1 (CGC 9.4)</a></td><td>$3.12M / €2.87M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Marvel+Comics+1+CGC+9.2+Pay+Copy">Marvel Comics #1 (CGC 9.2)</a></td><td>$2.4M / €2.2M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Detective+Comics+27+CGC+7.0">Detective Comics #27 (CGC 7.0)</a></td><td>$2.3M / €2.1M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=All-American+Comics+16+CGC+9.4">All-American Comics #16 (CGC 9.4)</a></td><td>$2.15M / €1.98M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Fantastic+Four+1+CGC+9.2">Fantastic Four #1 (CGC 9.2)</a></td><td>$1.5M / €1.38M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=X-Men+1+CGC+9.6">X-Men #1 (CGC 9.6)</a></td><td>$810K / €745K</td></tr>
+        </table>
+    </div>
+
+    <div class="card retro-video-games">
+        <h2><span data-en>Retro Video Games</span><span data-sk>Retro videohry</span><span data-de>Retro Videospiele</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Super+Mario+Bros+NES+Wata+9.8+sealed">Super Mario Bros. (NES, sealed)</a></td><td>~$3.2M+ / ≈€2.95M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Super+Mario+64+Nintendo+64+sealed+auction">Super Mario 64 (N64, sealed)</a></td><td>~$1.56M / ≈€1.4M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=The+Legend+of+Zelda+NES+Gold+No+Rev+A+sealed">The Legend of Zelda (NES, sealed)</a></td><td>~$1.8M / ≈€1.65M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Pokémon+Yellow+Game+Boy+Wata+9.4+sealed">Pokémon Yellow (Game Boy, sealed)</a></td><td>~$950K / ≈€870K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Stadium+Events+NES+rare">Stadium Events (NES, rare)</a></td><td>$100K+ / ≈€92K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Air+Raid+Atari+2600+rare">Air Raid (Atari 2600, rare)</a></td><td>$30K+ / ≈€28K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Tetris+Game+Boy+sealed+9.8">Tetris (Game Boy, sealed)</a></td><td>$75K+ / ≈€69K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Nintendo+World+Championships+Cartridge">Nintendo World Championships (NES)</a></td><td>~$300K+ / ≈€276K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Super+Mario+Bros+3+NES+sealed+rare">Super Mario Bros 3 (NES, sealed)</a></td><td>$150K+ / ≈€138K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Metroid+NES+rare+graded">Metroid (NES, early/graded)</a></td><td>$50K+ / ≈€46K+</td></tr>
+        </table>
+    </div>
+
+    <div class="card lego">
+        <h2><span data-en>LEGO</span><span data-sk>LEGO</span><span data-de>LEGO</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+San+Diego+Comic-Con+2013+Spider-Man">SDCC 2013 Spider‑Man (ultra‑rare)</a></td><td>~$14,000+ / ~€12,700+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+Cloud+City+10123">Star Wars Cloud City 10123</a></td><td>~$10,000+ / ~€9,200+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+Ole+Kirks+House+2009+Exclusive">Ole Kirk’s House (Inside Tour)</a></td><td>~$10,000+ / ~€9,200+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+Exclusive+T-Rex+4000031">Exclusive T‑Rex 4000031</a></td><td>~$9,000+ / ~€8,200+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+The+Vault+Memory+Lane+4000042">The Vault Memory Lane 4000042</a></td><td>~$9,000+ / ~€8,200+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+UCS+75419+Death+Star">Star Wars UCS 75419 Death Star</a></td><td>~$1100 / ~€1000+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+UCS+75192+Millennium+Falcon">Star Wars UCS 75192 Falcon</a></td><td>~$1,000+ / ~€920+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+Imperial+Star+Destroyer+10030">Imperial Star Destroyer UCS 10030</a></td><td>~$2,000+ / ~€1,840+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+Taj+Mahal+10189">Taj Mahal 10189 (sealed)</a></td><td>~$3,000+ / ~€2,760+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=LEGO+Cafe+Corner+10182">Cafe Corner 10182 (sealed)</a></td><td>~$2,500+ / ~€2,300+</td></tr>
+        </table>
+    </div>
+
+    <div class="card sneakers">
+        <h2><span data-en>Sneakers</span><span data-sk>Tenisky</span><span data-de>Turnschuhe</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Air+Jordan+1+Retro+High+OG+Chicago">Air Jordan 1 Retro High OG Chicago</a></td><td>$20K+ / €18.5K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Nike+Mag+Back+to+the+Future">Nike Mag “Back to the Future”</a></td><td>$25K+ / €23K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Adidas+Yeezy+Boost+750">Adidas Yeezy Boost 750</a></td><td>$15K+ / €14K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Converse+Chuck+Taylor+All+Star+70s">Converse Chuck Taylor All Star 70s</a></td><td>$12K+ / €11K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Reebok+Pump+OG+White+Black">Reebok Pump OG White/Black</a></td><td>$10K+ / €9.2K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Nike+Air+Max+1+OG">Nike Air Max 1 OG</a></td><td>$9K+ / €8.3K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Adidas+Forum+Hi">Adidas Forum Hi</a></td><td>$8K+ / €7.4K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Puma+Suede+Classic">Puma Suede Classic</a></td><td>$7K+ / €6.5K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=New+Balance+990v1">New Balance 990v1</a></td><td>$6K+ / €5.5K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Reebok+Pump+Omni+Lite">Reebok Pump Omni Lite</a></td><td>$5K+ / €4.6K+</td></tr>
+        </table>
+    </div>
+
+    <div class="card watches">
+        <h2><span data-en>Watches</span><span data-sk>Hodinky</span><span data-de>Uhren</span></h2>
+        <table>
+            <tr><td><a href="Patek-Philippe-Henry-Graves.html">Patek Philippe Henry Graves 📄</a></td><td>$24M+ / €22M+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Richard+Mille+RM+56-02">Richard Mille RM 56‑02 Sapphire</a></td><td>$2M+ / €1.85M+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Rolex+Paul+Newman+Daytona">Rolex Paul Newman Daytona</a></td><td>$1.2M+ / €1.1M+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=A.Lange+Sohne+Datograph+Perpetual+Tourbillon">A. Lange & Söhne Datograph</a></td><td>$400K+ / €370K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Vacheron+Constantin+Tourbillon">Vacheron Constantin Tourbillon</a></td><td>$500K+ / €460K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Audemars+Piguet+Royal+Oak+Jumbo+Extra-Thin">Audemars Piguet Royal Oak Jumbo</a></td><td>$150K+ / €138K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=TAG+Heuer+Monaco+Steve+McQueen">TAG Heuer Monaco Steve McQueen</a></td><td>$250K+ / €230K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Jaeger-LeCoultre+Reverso+Gyrotourbillon">JLC Reverso Gyrotourbillon</a></td><td>$350K+ / €320K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Grand+Seiko+Spring+Drive+Eichi+II">Grand Seiko Spring Drive Eichi II</a></td><td>$200K+ / €185K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Omega+Speedmaster+Moonwatch">Omega Speedmaster Moonwatch</a></td><td>$50K+ / €46K+</td></tr>
+        </table>
+    </div>
+
+    <div class="card sport-memorabilia">
+        <h2><span data-en>Sport Memorabilia</span><span data-sk>Športové suveníry</span><span data-de>Sport-Erinnerungsstücke</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Michael+Jordan+Game+Used+Shoes">Michael Jordan Game Used Shoes</a></td><td>$500K+ / €460K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Wayne+Gretzky+Game+Worn+Jersey">Wayne Gretzky Game Worn Jersey</a></td><td>$300K+ / €275K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Tom+Brady+Super+Bowl+Helmet">Tom Brady Super Bowl Helmet</a></td><td>$250K+ / €230K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Lionel+Messi+Signed+Cleats">Lionel Messi Signed Cleats</a></td><td>$180K+ / €165K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Serena+Williams+Autographed+Racquet">Serena Williams Signed Racquet</a></td><td>$75K+ / €70K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Usain+Bolt+Sprint+Shoes">Usain Bolt Sprint Shoes</a></td><td>$60K+ / €55K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Muhammad+Ali+Signed+Gloves">Muhammad Ali Signed Gloves</a></td><td>$200K+ / €185K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Pele+Signed+Jersey">Pele Signed Jersey</a></td><td>$150K+ / €138K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Wayne+Rooney+Signed+Boots">Wayne Rooney Signed Boots</a></td><td>$50K+ / €46K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=David+Beckham+Signed+Jersey">David Beckham Signed Jersey</a></td><td>$45K+ / €41K+</td></tr>
+        </table>
+    </div>
+
+    <div class="card figures">
+        <h2><span data-en>Figures</span><span data-sk>Figúrky</span><span data-de>Figuren</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Star+Wars+Darth+Vader+Action+Figure+1977">Darth Vader 1977 (Mint)</a></td><td>$200K+ / €185K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Star+Wars+Boba+Fett+Action+Figure+1979">Boba Fett 1979 (Mint)</a></td><td>$150K+ / €138K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=He-Man+Action+Figure+1982">He-Man 1982 (Original Mint)</a></td><td>$50K+ / €46K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=G.I.+Joe+Action+Figure+1964">G.I. Joe 1964 (Vintage)</a></td><td>$35K+ / €32K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Transformers+G1+Optimus+Prime">Transformers G1 Optimus Prime</a></td><td>$28K+ / €26K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Marvel+Legends+Iron+Man+Figure">Marvel Legends Iron Man</a></td><td>$15K+ / €14K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Funko+Pop+Vinyl+Rare">Funko Pop Rare Editions</a></td><td>$10K+ / €9.2K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Masters+of+the+Universe+Skeletor+Figure">Skeletor MOTU (1982)</a></td><td>$12K+ / €11K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Teenage+Mutant+Ninja+Turtles+Figure">TMNT Figure (1988)</a></td><td>$8K+ / €7.4K+</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Star+Trek+Action+Figure+Vintage">Star Trek Vintage Figure</a></td><td>$6K+ / €5.5K+</td></tr>
+        </table>
+    </div>
+
+    <div class="card magic">
+        <h2><span data-en>Magic: The Gathering</span><span data-sk>Magic: The Gathering</span><span data-de>Magic: The Gathering</span></h2>
+        <table>
+           <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=The+One+Ring+001/001+MTG">The One Ring (Unique 001/001)</a></td><td>$2.0M / €1.85M</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Black+Lotus+Alpha+PSA+10">Black Lotus Alpha (PSA 10)</a></td><td>$800K / €740K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mox+Sapphire+Alpha">Mox Sapphire Alpha (PSA 10)</a></td><td>$250K / €230K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mox+Jet+Alpha">Mox Jet Alpha (PSA 10)</a></td><td>$150K / €138K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mox+Ruby+Alpha">Mox Ruby Alpha (PSA 10)</a></td><td>$140K / €128K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mox+Pearl+Alpha">Mox Pearl Alpha (PSA 10)</a></td><td>$130K / €120K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mox+Emerald+Alpha">Mox Emerald Alpha (PSA 10)</a></td><td>$125K / €115K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Ancestral+Recall+Alpha">Ancestral Recall Alpha (PSA 10)</a></td><td>$100K / €92K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Time+Walk+Alpha">Time Walk Alpha (PSA 10)</a></td><td>$95K / €88K</td></tr>
+	   <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Timetwister+Alpha">Timetwister Alpha (PSA 10)</a></td><td>$90K / €83K</td></tr>
+        </table>
+    </div>
+
+    <div class="card coins">
+        <h2><span data-en>Coins</span><span data-sk>Mince</span><span data-de>Münzen</span></h2>
+        <table>
+            <tr><td><a href="1933-Double-Eagle.html">1933 Double Eagle (Gold) 📄</a></td><td>$18M / €16.6M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1794+Flowing+Hair+Silver+Dollar">1794 Flowing Hair Silver Dollar</a></td><td>$10M / €9.2M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1913+Liberty+Nickel">1913 Liberty Nickel (Rare)</a></td><td>$4.5M / €4.1M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1804+Silver+Dollar">1804 Silver Dollar (Rare)</a></td><td>$4M / €3.7M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Coin+Mint+Error+Rare">Rare Mint Error Coin (Unique)</a></td><td>$2.5M / €2.3M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1916+Mercury+Dime+Hawaii+Mint">1916 Mercury Dime (Hawaii)</a></td><td>$1.5M / €1.38M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1907+Saint+Gaudens+Double+Eagle">1907 Saint Gaudens Double Eagle</a></td><td>$1.2M / €1.1M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1870+S+Liberty+Seated+Dime">1870 S Liberty Seated Dime</a></td><td>$900K / €830K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1964+Eisenhower+Dollar+Proof+Error">1964 Eisenhower Dollar Error</a></td><td>$750K / €690K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=2007+Gold+Double+Eagle+Ultra+Rare">2007 Gold Double Eagle (Rare)</a></td><td>$600K / €550K</td></tr>
+        </table>
+    </div>
+
+    <div class="card hotwheels">
+        <h2><span data-en>Hot Wheels</span><span data-sk>Hot Wheels</span><span data-de>Hot Wheels</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1969+Pink+Rear+End+Hot+Wheels">1969 Pink Rear End (Mint)</a></td><td>$150K / €138K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1968+Custom+Mustang+Hot+Wheels">1968 Custom Mustang (Mint)</a></td><td>$140K / €128K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1969+Ed+Shaver+Custom+Camaro+Hot+Wheels">1969 Ed Shaver Custom Camaro</a></td><td>$135K / €124K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1968+Custom+Volkswagen+Hot+Wheels">1968 Custom Volkswagen (Mint)</a></td><td>$130K / €120K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1969+Beach+Bomb+Hot+Wheels">1969 Beach Bomb (Rare)</a></td><td>$125K / €115K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1969+Red+Baron+Hot+Wheels">1969 Red Baron (Mint)</a></td><td>$120K / €110K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1970+Super+Chromes+Hot+Wheels">1970 Super Chromes (Original)</a></td><td>$115K / €106K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1970+Purple+Pontiac+GTO+Hot+Wheels">1970 Purple Pontiac GTO</a></td><td>$110K / €101K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1969+Flying+Colors+Hot+Wheels">1969 Flying Colors (Rare)</a></td><td>$105K / €97K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=1969+Open+Fire+Hot+Wheels">1969 Open Fire (Rare)</a></td><td>$100K / €92K</td></tr>
+        </table>
+    </div>
+
+    <div class="card hockey">
+        <h2><span data-en>Trading Cards (Sport)</span><span data-sk>Zberateľské karty (šport)</span><span data-de>Trading Karten (Sport)</span></h2>
+        <table>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Wayne+Gretzky+rookie+card">Wayne Gretzky Rookie (PSA 10)</a></td><td>$3.75M / €3.45M</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Connor+McDavid+RPA">Connor McDavid RPA (PSA 10)</a></td><td>$113K / €104K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Sidney+Crosby+rookie+card">Sidney Crosby Rookie (PSA 10)</a></td><td>$120K / €110K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Alexander+Ovechkin+rookie+card">Alexander Ovechkin Rookie (PSA 10)</a></td><td>$100K / €92K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Mario+Lemieux+rookie+card">Mario Lemieux Rookie (PSA 10)</a></td><td>$90K / €83K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Patrick+Roy+rookie+card">Patrick Roy Rookie (PSA 10)</a></td><td>$85K / €78K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Jaromir+Jagr+rookie+card">Jaromír Jágr Rookie (PSA 10)</a></td><td>$75K / €69K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Teemu+Selanne+rookie+card">Teemu Selänne Rookie (PSA 10)</a></td><td>$70K / €64K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Martin+Brodeur+rookie+card">Martin Brodeur Rookie (PSA 10)</a></td><td>$65K / €59K</td></tr>
+            <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Eric+Lindros+rookie+card">Eric Lindros Rookie (PSA 10)</a></td><td>$60K / €55K</td></tr>
+    	</table>
+        </div>
+
+    </div>
+    <footer>
+    <div class="disclaimer">
+        <p>
+            <span class="warning-icon">⚠️</span>
+            <strong data-en>AI & Search Disclaimer:</strong>
+            <strong data-sk>Upozornenie AI a vyhľadávania:</strong>
+            <strong data-de>KI- und Suchhinweis:</strong>
+            
+            <span data-en>These rankings are generated by AI. Market prices fluctuate rapidly and <strong>all values are rounded for clarity</strong>. Search links are for reference only; results may show similar or illustrative items that do not match the exact specifications.</span>
+            <span data-sk>Tieto rebríčky sú generované AI. Ceny na trhu sa rýchlo menia a <strong>všetky sumy sú pre lepšiu prehľadnosť zaokrúhlené</strong>. Odkazy na vyhľadávanie sú len orientačné; výsledky môžu zobrazovať podobné alebo ilustračné predmety, ktoré nezodpovedajú presnej špecifikácii.</span>
+            <span data-de>Diese Ranglisten werden von KI erstellt. Marktpreise schwanken schnell und <strong>alle Beträge sind aus Gründen der Übersichtlichkeit gerundet</strong>. Suchlinks dienen nur als Referenz; die Ergebnisse können ähnliche oder illustrative Objekte zeigen, die nicht der genauen Spezifikation entsprechen.</span>
+        </p>
+        
+        <p data-en>This guide is for educational purposes only and does not constitute financial advice. Accuracy is not guaranteed.</p>
+        <p data-sk>Táto stránka slúži len na vzdelávacie účely a nepredstavuje finančné poradenstvo. Presnosť údajov nie je zaručená.</p>
+        <p data-de>Diese Seite dient nur zu Bildungszwecken und stellt keine Finanzberatung dar. Die Genauigkeit der Daten wird nicht garantiert.</p>
+        
+        <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
+    </div>
+</footer>
+
+</body>
+</html>
