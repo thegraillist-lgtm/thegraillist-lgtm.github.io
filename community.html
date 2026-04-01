@@ -276,6 +276,10 @@ function toggleMenu() {
         <i class="fab fa-instagram"></i>
     </a>
 
+    <a href="https://www.pinterest.com/thegraillist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-pinterest"></i>
+    </a>
+
     <a href="mailto:thegraillist@gmail.com" title="thegraillist@gmail.com">
         <i class="fas fa-envelope"></i>
     </a>
@@ -342,16 +346,14 @@ function toggleMenu() {
 
   /* - - - CONFIGURATION VARIABLES - - - */
 
-  var __semio__params = {
-    graphcommentId: "thegraillist", // make sure the id is yours
+ var __semio__params = {
+    graphcommentId: "thegraillist", 
 
     behaviour: {
-      // HIGHLY RECOMMENDED
-      //  uid: "...", // uniq identifer for the comments thread on your page (ex: your page id)
+      uid: window.location.pathname, 
+      // Skontrolujeme aj localStorage, aby sme vedeli tému okamžite
+      theme: localStorage.getItem("theme") === "dark" ? "dark" : "light",
     },
-
-    // configure your variables here
-
   }
 
   /* - - - DON'T EDIT BELOW THIS LINE - - - */

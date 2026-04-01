@@ -690,12 +690,16 @@ margin:10px 0;
     
     /* Tu nastavíme farbu pre svetlý režim - napr. tvoja tmavomodrá/bridlicová */
     color: #425A6C !important;
+   
+   
     background: none;
     -webkit-background-clip: initial;
     background-clip: initial;
     filter: none;
     text-shadow: none;
-}
+line-height: 1.2 !important;    /* Dá priestor nožičkám */
+    margin-bottom: 5px !important; /* Pritiahne spodný text silno nahor */
+    display: block;                 /* Zabezpečí správne fungovanie marginu */}
 
 /* Skryjeme shine efekt v svetlom režime */
 .gold-text::after {
@@ -845,4 +849,14 @@ margin:10px 0;
 /* Automatická zmena na svetlú v tmavom režime */
 body.dark .intro-text p {
     color: #bbb; /* Alebo #fff, ak chceš úplne bielu ako na indexe */
+}
+
+/* Toto odstráni akékoľvek biele "rámčeky", ktoré by GraphComment mohol vytvárať */
+#graphcomment iframe {
+    color-scheme: light dark; /* Povie prehliadaču, že iframe podporuje oba režimy */
+}
+
+#graphcomment {
+    background-color: transparent !important;
+    margin-top: 20px;
 }
