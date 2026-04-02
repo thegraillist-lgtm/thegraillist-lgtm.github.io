@@ -265,14 +265,6 @@ footer {
 }
 .infobox-detail { font-size: 12px; opacity: 0.6; }
 
-body {
-    opacity: 0;               /* stránka je skrytá pri načítaní */
-    transition: opacity 0.3s; /* jemné vyjavovanie */
-}
-
-body.visible {
-    opacity: 1;               /* odhalená stránka */
-}
 
 /* --- Špeciálne nastavenie pre komunitu bez rámčeka --- */
 .community-content {
@@ -851,12 +843,3 @@ body.dark .intro-text p {
     color: #bbb; /* Alebo #fff, ak chceš úplne bielu ako na indexe */
 }
 
-/* Toto odstráni akékoľvek biele "rámčeky", ktoré by GraphComment mohol vytvárať */
-#graphcomment iframe {
-    color-scheme: light dark; /* Povie prehliadaču, že iframe podporuje oba režimy */
-}
-
-#graphcomment {
-    background-color: transparent !important;
-    margin-top: 20px;
-}

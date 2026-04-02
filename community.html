@@ -203,7 +203,7 @@ function rejectCookies() {
         document.getElementById('cookie-banner').style.display = 'block';
     }
 
-    document.body.classList.add("visible");
+    
 });
 
 /* HAMBURGER MENU */
@@ -346,14 +346,16 @@ function toggleMenu() {
 
   /* - - - CONFIGURATION VARIABLES - - - */
 
- var __semio__params = {
-    graphcommentId: "thegraillist", 
+  var __semio__params = {
+    graphcommentId: "thegraillist", // make sure the id is yours
 
     behaviour: {
-      uid: window.location.pathname, 
-      // Skontrolujeme aj localStorage, aby sme vedeli tému okamžite
-      theme: localStorage.getItem("theme") === "dark" ? "dark" : "light",
+      // HIGHLY RECOMMENDED
+      //  uid: "...", // uniq identifer for the comments thread on your page (ex: your page id)
     },
+
+    // configure your variables here
+
   }
 
   /* - - - DON'T EDIT BELOW THIS LINE - - - */
