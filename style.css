@@ -352,11 +352,7 @@ margin:10px 0;
 
 }
 
-#disqus_recommendations, 
-.disqus-reactions, 
-#reactions {
-    display: none !important;
-}
+
 
 /* --- MINIMALISTICKÝ PARTNER RIADOK --- */
 /* --- PARTNER RIADOK (IDENTICKÝ S INFOBOXOM) --- */
@@ -841,5 +837,210 @@ line-height: 1.2 !important;    /* Dá priestor nožičkám */
 /* Automatická zmena na svetlú v tmavom režime */
 body.dark .intro-text p {
     color: #bbb; /* Alebo #fff, ak chceš úplne bielu ako na indexe */
+}
+
+/* --- ÚVODNÝ TEXT A FARBY --- */
+.intro-text p {
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+body.dark .intro-text p {
+    color: #bbb;
+}
+
+/* --- SECTION DIVIDER (Šípka) --- */
+.section-divider {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid #f3f3f3; /* Farba pre svetlý režim */
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+/* Úprava šípky pre tmavý režim */
+body.dark .arrow-down {
+    border-top-color: #1b1b1b; /* Farba tvojho tmavého pozadia */
+}
+
+.arrow-down::after {
+    content: "⌵"; 
+    position: absolute;
+    top: -38px;
+    left: -10px;
+    font-size: 32px;
+    color: #e67e22; /* Oranžová šípka */
+    font-weight: bold;
+}
+
+/* --- KOMUNITNÝ ZOZNAM (2 Stĺpce) --- */
+.fb-community-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px 40px;
+    max-width: 900px;
+    margin: 10px auto 60px;
+    padding: 0 20px;
+}
+
+.fb-item {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.fb-item:hover {
+    opacity: 0.8;
+}
+
+.fb-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+    flex-shrink: 0;
+
+    /* 🎨 HRUBÝ OSTRÝ RÁM */
+    background: #fff;
+    padding: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.30);
+
+    border-radius: 0; /* ostré hrany */
+}
+
+.fb-item-info h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.1px;
+
+    /* TU MEŇ FARBU PODĽA POTREBY */
+    color: #F5CF6D !important; /* Aktuálne nastavená zlatá */
+}
+
+/* Ak chceš inú farbu pre Svetlý režim, pridaj toto: */
+body:not(.dark) .fb-item-info h3 {
+    color: #333 !important; /* Tmavomodrá pre svetlý podklad */
+}
+.fb-item-info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* RESPONZIVITA (Mobilné zobrazenie) */
+@media (max-width: 850px) {
+    .fb-community-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 500px;
+    }
+}
+/* --- POZADIE POD ŠÍPKOU (NOVÁ SEKCIA) --- */
+.community-background {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, #f3f3f3 0%, #e0d8c5 100%);
+    padding: 60px 0 80px;
+    margin-top: -10px;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.05);
+}
+
+body.dark .community-background {
+    background: linear-gradient(to bottom, #2c3e50 0%, #1b2a38 100%);
+    box-shadow: none;
+}
+
+footer {
+    margin-top: 0;
+    position: relative;
+}
+
+.community-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+body:not(.dark) .community-background::before {
+    top: -2px; /* 🔥 TU VRACIAME TEN “DIZAJNOVÝ OFFSET” */
+    background: rgba(0, 0, 0, 0.12);
+}
+
+body.dark .fb-item img {
+    background: #eaeaea;
+    border: 2px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.fb-item-info::after {
+    content: "\f09a"; /* Font Awesome Facebook icon */
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+
+    display: inline-block;
+    margin-top: 8px;
+
+    font-size: 14px;
+    color: #3f5d73;
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+body.dark .fb-item-info::after {
+    color: #e8f5bd;
+    opacity: 0.3;
+}
+
+.fb-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* zarovnanie doľava */
+    justify-content: center; /* vertikálne centrovanie */
+    text-align: left;
+    min-height: 120px; /* rovnaká výška ako obrázok */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+}
+
+body.dark footer::before {
+    top: -1px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(232, 245, 189, 0.35),
+        transparent
+    );
 }
 
