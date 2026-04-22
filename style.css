@@ -966,3 +966,34 @@ body.dark .contact-item a {
     }
 }
 
+/* Štýl pre SEO text pod tabuľkami */
+.info-text-seo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+    color: #444; /* Jemnejšia čierna pre lepšiu čitateľnosť */
+    font-size: 0.95rem;
+}
+
+.info-text-seo p {
+    margin-bottom: 15px;
+}
+
+.info-text-seo a {
+    color: #3f5d73; /* Tvoja modrá farba, ktorú používaš */
+    text-decoration: underline;
+}
+
+.info-text-seo a:hover {
+    color: #0056b3;
+}
+
+/* Podpora pre tvoj DARK MODE */
+body.dark .info-text-seo {
+    color: #ccc; /* Svetlošedá v tmavom režime */
+}
+
+body.dark .info-text-seo a {
+    color: #8fb6d4; /* Svetlejšia modrá pre lepší kontrast v tme */
+}
