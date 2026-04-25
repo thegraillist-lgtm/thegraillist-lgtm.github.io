@@ -997,3 +997,23 @@ body.dark .info-text-seo {
 body.dark .info-text-seo a {
     color: #8fb6d4; /* Svetlejšia modrá pre lepší kontrast v tme */
 }
+
+/* =========================
+   DARK MODE ONLY FADE
+========================= */
+
+/* default (light mode) → žiadna zmena */
+body {
+    opacity: 1;
+}
+
+/* dark mode začne skrytý */
+body.dark {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* po načítaní sa zobrazí */
+body.dark.visible {
+    opacity: 1;
+}
