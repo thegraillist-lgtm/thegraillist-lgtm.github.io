@@ -193,7 +193,7 @@ td a { text-decoration: none; color: #333; display: inline-block; }
 .dark td a { color: #eee; }
 td a:hover { text-decoration: underline; }
 
-td:last-child { text-align: right; font-weight: 600; width: 160px; line-height: 1.5; padding-right: 15px; }
+td:last-child { text-align: right; font-weight: 600; width: 90px; line-height: 1.5; padding-right: 15px; }
 
 .usd { color: #2e7d32; display: block; }
 .eur { color: #3f5d73; display: block; font-weight: 500; }
