@@ -193,25 +193,14 @@ td a { text-decoration: none; color: #333; display: inline-block; }
 .dark td a { color: #eee; }
 td a:hover { text-decoration: underline; }
 
-td:last-child { text-align: right; font-weight: 600; width: 90px; line-height: 1.5; padding-right: 15px; }
+td:last-child { text-align: right; font-weight: 600; width: 94px; line-height: 1.5; padding-right: 15px; }
 
 .usd { color: #2e7d32; display: block; }
 .eur { color: #3f5d73; display: block; font-weight: 500; }
 .dark .usd { color: #81c784; }
 .dark .eur { color: #a5c2d9; }
 
-/* --- MEDAILY --- */
-td:first-child { position: relative; padding-left: 35px !important; }
-tr:nth-child(-n+3) td:first-child::before {
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-}
-tr:nth-child(1) td:first-child::before { content: "🥇"; }
-tr:nth-child(2) td:first-child::before { content: "🥈"; }
-tr:nth-child(3) td:first-child::before { content: "🥉"; }
+
 
 /* --- RESPONSIVE --- */
 @media (min-width: 1050px) {
@@ -1010,10 +999,28 @@ body {
 /* dark mode začne skrytý */
 body.dark {
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.2s ease;
 }
 
 /* po načítaní sa zobrazí */
 body.dark.visible {
     opacity: 1;
+
 }
+
+@media (max-width: 768px) {
+    .card:hover {
+        transform: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* LIGHT MODE */
+tr:nth-child(1) { background: linear-gradient(110deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 50%, rgba(212,175,55,0.3) 100%); }
+tr:nth-child(2) { background: linear-gradient(110deg, rgba(192,192,192,0.3) 0%, rgba(192,192,192,0.1) 50%, rgba(192,192,192,0.3) 100%); }
+tr:nth-child(3) { background: linear-gradient(110deg, rgba(205,127,50,0.3) 0%, rgba(205,127,50,0.1) 50%, rgba(205,127,50,0.3) 100%); }
+
+/* DARK MODE */
+.dark tr:nth-child(1) { background: linear-gradient(110deg, rgba(245,207,109,0.4) 0%, rgba(245,207,109,0.15) 50%, rgba(245,207,109,0.4) 100%); }
+.dark tr:nth-child(2) { background: linear-gradient(110deg, rgba(224,224,224,0.4) 0%, rgba(224,224,224,0.15) 50%, rgba(224,224,224,0.4) 100%); }
+.dark tr:nth-child(3) { background: linear-gradient(110deg, rgba(224,169,109,0.4) 0%, rgba(224,169,109,0.15) 50%, rgba(224,169,109,0.4) 100%); }
