@@ -39,18 +39,17 @@
 }
 </script>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Top 10 Historical Rarities & Autographs 2026 | The Grail List</title>
+<meta name="description" content="Explore 2026's top historical collectibles: rare banknotes, Albert Einstein autograph, limited 2€ coins, vintage postcards, legendary guitars and musical instruments. Current prices and collector insights included.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="The Grail List">
+
 <link rel="canonical" href="https://thegraillist.com/historical.html">
 <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/historical.html">
 
-
-<title>Top 10 Historical Rarities & Autographs 2026 | The Grail List</title>
-<meta name="description" content="Explore 2026's top historical collectibles: rare US banknotes, Albert Einstein autographs, limited edition 2 Euro coins, vintage postcards, legendary guitars, and rare musical instruments. Current prices and collector insights included.">
-<meta name="keywords" content="rare banknotes 2026, historical autographs, Albert Einstein signature, rare 2 euro coins, vintage postcards, legendary guitars, rare musical instruments, historical collectibles, numismatics, Stradivarius price, Grace Kelly 2 euro">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thegraillist.com/historical.html">
 <meta property="og:title" content="Top 10 Historical Rarities & Autographs 2026">
@@ -560,11 +559,26 @@ function toggleMenu() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

@@ -49,7 +49,7 @@
     
     <title>John Lennon’s Signed Double Fantasy Album: The Story Behind the 825,000€ Artifact | The Grail List</title>
     <meta name="description" content="Discover the chilling story behind the Double Fantasy album, signed by John Lennon for his own killer. Find out why this artifact is valued at nearly a million dollars today.">
-    <meta name="keywords" content="John Lennon podpis, najdrahší album, Double Fantasy, Mark David Chapman, zberateľské autogramy, vzácne vinyly, The Beatles, macabre collectibles">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
     <link rel="canonical" href="https://thegraillist.com/john-lennon-autograph.html">
@@ -509,11 +509,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

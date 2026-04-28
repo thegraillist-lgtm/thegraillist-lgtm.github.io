@@ -48,11 +48,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Pokémon Blue: The $420,000 Story of the World’s Rarest Video Game | The Grail List</title>
-
-<meta name="description" content="Pokémon Blue Red Text Misprint. Discover why a simple 1998 printing error made this game worth over $420,000 in 2026.">
-
-<meta name="keywords" content="Pokémon Blue Misprint, Red Text Misprint, world's most expensive video game, vzácne pokémon hry, Nintendo 1998 rarity, rare Pokémon games, Pokémon Blue error box, zberateľské hry">
-<meta name="author" content="The Grail List">
+    <meta name="description" content="Pokémon Blue Red Text Misprint. Discover why a simple 1998 printing error made this game worth over $420,000 in 2026.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="The Grail List">
 
 <link rel="canonical" href="https://thegraillist.com/pokemon-blue-misprint.html">
 <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/pokemon-blue-misprint.html">
@@ -479,12 +477,28 @@ function rejectCookies() {
             <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
         </div>
     </footer>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

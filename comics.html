@@ -42,17 +42,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <title>Top 10 Most Valuable Comics | The Grail List</title>
+    <meta name="description" content="Explore the most expensive comic books ever sold, from Action Comics #1 to Amazing Fantasy #15. 2026 market values for serious collectors.Marvel, DC & Golden Age">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="The Grail List">
 
-   
-<title>Top 10 Most Valuable Comics | The Grail List</title>
-<meta name="description" content="Explore the most expensive comic books ever sold, from Action Comics #1 to Amazing Fantasy #15. 2026 market values for serious collectors.Marvel, DC & Golden Age">
-<meta name="keywords" content="rare comics, most expensive comic books, Marvel Comics, DC Comics, Golden Age comics, Action Comics 1, Amazing Fantasy 15, Spider-Man first appearance, Superman first appearance, Batman first appearance">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="canonical" href="https://thegraillist.com/comics.html">
 <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/comics.html">
 
-
-<!-- Open Graph for social sharing -->
 <meta property="og:title" content="Most Valuable Comic Books Guide 2026">
 <meta property="og:description" content="Check the latest record-breaking sales of Marvel, DC, and Golden Age comics. Are your old comics worth millions?">
 <meta property="og:url" content="https://thegraillist.com/comics.html">
@@ -495,11 +493,26 @@ function toggleMenu() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

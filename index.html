@@ -126,8 +126,9 @@ function loadAnalytics() {
 
     <title>The Grail List | Rarest Collectibles in the World (2026)</title>
     <meta name="description" content="Top 10 rare collectibles with real stories and prices. Discover Pokémon cards, comics, games, LEGO sets, sneakers, watches, sports memorabilia and many more categories.">
-    <meta name="keywords" content="thegraillist, collectibles, rare items, most expensive cards, pokemon, lego deals, luxury watches, comic books, grail list, investment">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
+    
     <link rel="canonical" href="https://thegraillist.com/">
     
     <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/">
@@ -742,11 +743,26 @@ Entdecken Sie die wertvollsten Sammlerstücke und Meisterwerke. Von seltenen his
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

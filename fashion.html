@@ -47,23 +47,19 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <title>Top 10 Most Expensive Luxury Collectibles 2026 | The Grail List</title>
-
-    <meta name="description" content="Explore the world's most expensive luxury collectibles. From the $3.8M Mouawad Diamond Purse and rare Hermès Birkin bags to legendary diamonds and million-dollar fountain pens. Updated 2026 ranking.">
-    <meta name="keywords" content="most expensive handbags, hermes himalaya birkin price, luxury jewelry auction records, most expensive fountain pen, rare luxury collectibles, expensive handbags 2026, diamond jewelry value">
+    <meta name="description" content="Explore the world's most expensive luxury collectibles. From the $3.8M Mouawad Diamond Purse and rare Hermès Birkin bags to legendary diamonds and million-dollar fountain pens">
+    
     <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
     <link rel="canonical" href="https://thegraillist.com/fashion.html">
     <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/fashion.html">
 
-
-    <!-- Open Graph (social media preview) -->
     <meta property="og:title" content="Top 10 Most Expensive Luxury Collectibles 2026">
     <meta property="og:description" content="See the most valuable handbags, jewelry and fountain pens ever sold — including Hermès Himalaya Birkin and million-dollar diamonds.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thegraillist.com/fashion.html">
     <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
 
-    <!-- Twitter / X preview -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Top 10 Most Expensive Luxury Collectibles 2026">
     <meta name="twitter:description" content="Discover the world's most valuable handbags, jewelry and fountain pens.">
@@ -599,11 +595,26 @@ function toggleMenu() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

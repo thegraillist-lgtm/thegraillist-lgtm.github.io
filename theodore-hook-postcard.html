@@ -49,7 +49,7 @@
     
    <title>The World's Oldest Postcard | The Grail List</title>
     <meta name="description" content="Theodore Hook and the 1840 prank: The world’s oldest and most expensive postcard. From a historic practical joke to a unique auction record.">
-    <meta name="keywords" content="Theodore Hook, oldest postcard, najstaršia pohľadnica, Penny Black, philately, najdrahšia pohľadnica, poštová história">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
     <link rel="canonical" href="https://thegraillist.com/theodore-hook-postcard.html">
@@ -444,12 +444,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
-</script>
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
 
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
+</script>
 </body>
 </html>

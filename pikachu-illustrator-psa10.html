@@ -50,13 +50,12 @@
     <title>Pikachu Illustrator PSA 10: Why This Card Is Worth $16 Million | The Grail List</title>
 
     <meta name="description" content="Discover why the Pikachu Illustrator PSA 10 is the most expensive trading card in the world, selling for over $16 million.">
-    <meta name="keywords" content="Pikachu Illustrator, PSA 10 Pikachu, most expensive Pokémon card, rare trading cards, Pokemon collectibles">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
     <link rel="canonical" href="https://thegraillist.com/pikachu-illustrator-psa10.html">
     <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/pikachu-illustrator-psa10.html">
 
-    <!-- FACEBOOK / INSTAGRAM (SLOVENSKY) -->
     <meta property="og:title" content="Pikachu Illustrator PSA 10: prečo táto karta stojí 16 miliónov dolárov">
     <meta property="og:description" content="Najdrahšia Pokémon karta na svete. Pozrite si príbeh Pikachu Illustratora, ktorý dosiahol hodnotu viac ako 16 miliónov dolárov.">
     <meta property="og:image" content="https://thegraillist.com/img/pikachu-illustrator-psa10.jpg">
@@ -66,7 +65,6 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="The Grail List">
 
-    <!-- TWITTER (EN - môžeš nechať EN kvôli globálu) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pikachu Illustrator PSA 10: Why This Card Is Worth $16 Million">
     <meta name="twitter:description" content="Discover why the Pikachu Illustrator PSA 10 became the most expensive trading card ever sold.">
@@ -497,11 +495,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

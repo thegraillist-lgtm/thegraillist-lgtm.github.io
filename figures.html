@@ -45,14 +45,14 @@
 
 <title>Top 10 Most Valuable Figures & Toys 2026 | The Grail List</title>
 <meta name="description" content="Discover the top 10 most valuable action figures and toys in 2026. Rare LEGO, Funko Pop!, Star Wars prototypes, and collectible figures with market prices and investment tips.">
-<meta name="keywords" content="rare action figures, most expensive toys, LEGO Star Wars, Funko Pop collectible, Star Wars Kenner figures, MOTU action figures, Barbie vintage, toy investments 2026, collectible figures">
+<meta name="robots" content="index, follow">
+<meta name="author" content="The Grail List">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="canonical" href="https://thegraillist.com/figures.html">
 <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/figures.html">
 
 
-<!-- Open Graph / Social Sharing -->
 <meta property="og:title" content="Rarest Toys & Figures Guide 2026">
 <meta property="og:description" content="Check the latest market prices for LEGO, Funko Pop!, Star Wars, Barbie, and other rare collectibles.">
 <meta property="og:url" content="https://thegraillist.com/figures.html">
@@ -479,11 +479,26 @@ function toggleMenu() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

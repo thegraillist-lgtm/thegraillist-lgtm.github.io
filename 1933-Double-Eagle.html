@@ -49,7 +49,7 @@
     
    <title>The $19 Million Golden Ghost: 1933 Double Eagle | The Grail List</title>
     <meta name="description" content="The story of the 1933 Double Eagle, the coin that was never meant to exist and became the most expensive gold coin in history.">
-    <meta name="keywords" content="1933 Double Eagle, najdrahšia minca sveta, vzácne mince, zlatá minca, numizmatika, King Farouk coin, Saint-Gaudens">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
     <link rel="canonical" href="https://thegraillist.com/1933-double-eagle.html">
@@ -473,11 +473,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

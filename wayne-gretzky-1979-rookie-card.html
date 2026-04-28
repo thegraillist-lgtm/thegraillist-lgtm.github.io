@@ -49,7 +49,7 @@
 
 <title>Wayne Gretzky 1979 Rookie Card: The $3.75M Holy Grail of Hockey | The Grail List</title>
 <meta name="description" content="Discover why Wayne Gretzky's 1979 O-Pee-Chee rookie card is worth $3.75 million and how to spot the 'Rough Cut' original.">
-<meta name="keywords" content="Wayne Gretzky Rookie Card, 1979 O-Pee-Chee Gretzky, Topps vs O-Pee-Chee, most expensive hockey card, PSA 10 Gretzky, hokejové karty, zberateľské grály, O-Pee-Chee Rough Cut">
+<meta name="robots" content="index, follow">
 <meta name="author" content="The Grail List">
 
 <link rel="canonical" href="https://thegraillist.com/wayne-gretzky-1979-rookie-card.html">
@@ -474,12 +474,28 @@ function rejectCookies() {
             <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
         </div>
     </footer>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

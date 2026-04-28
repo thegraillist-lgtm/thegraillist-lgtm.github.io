@@ -43,26 +43,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <title>Most Expensive Die-Cast & Scale Models 2026 | World Records | The Grail List</title>
-
 <meta name="description" content="Explore the world's most expensive scale models of 2026. From the $7.5M Gold Lamborghini to rare 1906 Märklin trains and museum-quality Titanic replicas.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="The Grail List">
 
-<meta name="keywords" content="most expensive model car, gold Lamborghini 1:8, rare Märklin trains, world record die-cast, Amalgam Collection Ferrari, Stuart Hughes Bugatti, expensive scale models 2026, collector trains, rare ship models">
-<!-- Open Graph for social sharing -->
 <meta property="og:title" content="Ultimate 2026 Guide to Die-Cast & Scale Models">
 <meta property="og:description" content="Explore rare and valuable die-cast trains, cars, planes, and boats. Check current prices, collector rankings, and top model kits of 2026.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thegraillist.com/models.html">
 <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Top 10 Most Expensive Scale Models 2026">
 <meta name="twitter:description" content="Discover the $7.5M Gold Lamborghini and other record-breaking models in our ultimate 2026 collector's guide.">
 <meta name="twitter:image" content="https://thegraillist.com/img/main-preview.jpg">
 
-<!-- Favicon -->
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="canonical" href="https://thegraillist.com/models.html">
     <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/models.html">
@@ -490,11 +487,26 @@ function toggleMenu() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

@@ -49,8 +49,9 @@
     
     <title>Kurt Cobain's $6M Martin D-18E Guitar | The Grail List</title>
     <meta name="description" content="Discover the story of Kurt Cobain’s modified Martin D-18E guitar from MTV Unplugged, which became the most expensive guitar ever sold at over 6 million dollars.">
-    <meta name="keywords" content="Kurt Cobain, Nirvana, Martin D-18E, najdrahšia gitara, hudobné legendy, MTV Unplugged">
-    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="The Grail List">
+        
     <link rel="canonical" href="https://thegraillist.com/kurt-cobain-guitar.html">
     <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/kurt-cobain-guitar.html">
 
@@ -58,7 +59,10 @@
     <meta property="og:description" content="Fascinujúca cesta gitary Kurta Cobaina od úpravy pre ľaváka až po rekordnú aukciu.">
     <meta property="og:image" content="https://thegraillist.com/img/cobain-unplugged.jpg">
     <meta property="og:url" content="https://thegraillist.com/kurt-cobain-guitar.html">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Grail List">
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -443,12 +447,28 @@ In den 50er und 60er Jahren, als die Welt im Rock-'n'-Roll-Fieber war, versuchte
             <p class="copyright">&copy; 2026 The Grail List | Ultimate Collector's Guide</p>
         </div>
     </footer>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

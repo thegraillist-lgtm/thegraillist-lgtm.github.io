@@ -49,7 +49,7 @@
     
     <title>Volkswagen Beach Bomb: The $175,000 Story of the World’s Rarest Hot Wheels | The Grail List</title>
     <meta name="description" content="Meet the legendary pink Volkswagen Beach Bomb. Discover why this 1969 Hot Wheels prototype is now the most expensive die-cast car, worth over $175,000.">
-    <meta name="keywords" content="Volkswagen Beach Bomb, Hot Wheels rarity, world's most expensive toy car, ružový Beach Bomb, Bruce Pascal collection, rare die-cast models, Mattel 1969, zberateľské autíčka">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
 <link rel="canonical" href="https://thegraillist.com/volkswagen-beach-bomb.html">
@@ -479,12 +479,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
-</script>
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
 
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
+</script>
 </body>
 </html>

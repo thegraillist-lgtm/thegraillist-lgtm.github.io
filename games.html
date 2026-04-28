@@ -39,22 +39,19 @@
 }
 </script>
 
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <title>Top 10 Most Valuable Video Games 2026 | The Grail List</title>
 <meta name="description" content="Explore the top 10 most valuable retro video games in 2026. Rare Nintendo, SEGA, PlayStation, and Atari games, including sealed classics and prototypes with market prices and investment insights.">
-<meta name="keywords" content="rare video games, most expensive games, retro NES collectors, sealed Super Mario 64, Nintendo prototypes, SEGA Genesis, PlayStation classics, Atari rare games, collectible games 2026">
+<meta name="robots" content="index, follow">
+<meta name="author" content="The Grail List">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="canonical" href="https://thegraillist.com/games.html">
 <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/games.html">
 
-
-<!-- Open Graph / Social Sharing -->
 <meta property="og:title" content="The Ultimate Rare Video Game Guide 2026">
 <meta property="og:description" content="Check the market value of retro video games. Rankings for Nintendo, SEGA, PlayStation, Atari, and rare prototype consoles.">
 <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
@@ -479,11 +476,26 @@ function toggleMenu() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

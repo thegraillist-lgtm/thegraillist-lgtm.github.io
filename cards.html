@@ -45,19 +45,19 @@
 
     <title>Top 10 Most Valuable Trading Cards | The Grail List</title>
     <meta name="description" content="Discover the ultimate collection of the world's most valuable trading cards: Yu-Gi-Oh!, Lorcana, One Piece, Star Wars Unlimited and Dragon Ball Super. Updated market prices for elite collectors.">
-    <meta name="keywords" content="trading cards, expensive pokemon cards, yu-gi-oh rarities, magic the gathering, lorcana cards, one piece card game, card collecting guide">
+    
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
+
     <link rel="canonical" href="https://thegraillist.com/cards.html">
     <link rel="alternate" hreflang="x-default" href="https://thegraillist.com/cards.html">
    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Top 10 Most Valuable Trading Cards 2026 | The Grail List">
     <meta property="og:description" content="Explore the ultimate list of the world's most valuable trading cards in 2026. Pokémon, Yu-Gi-Oh!, Lorcana and more with updated prices.">
     <meta property="og:image" content="https://thegraillist.com/img/main-preview.jpg">
     <meta property="og:url" content="https://thegraillist.com/cards.html">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Top 10 Most Valuable Trading Cards 2026">
     <meta name="twitter:description" content="From Pikachu to Blue-Eyes White Dragon, discover the most valuable trading cards this year. Updated collector prices for 2026.">
@@ -500,11 +500,26 @@ function toggleMenu() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

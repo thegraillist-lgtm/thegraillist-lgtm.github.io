@@ -50,7 +50,7 @@
     <title>Action Comics #1: The Comic Book Grail That Survived War, Thieves, and Rewrote History | The Grail List</title>
 
     <meta name="description" content="Discover the legendary story of Action Comics #1, the first Superman comic. From 10 cents in 1938 to a multi-million dollar grail that survived war, theft, and history itself.">
-    <meta name="keywords" content="Action Comics 1, Superman first appearance, rare comics, comic book grail, Jerry Siegel, Joe Shuster, DC Comics, most valuable comic, collector comics, vintage comics">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
 <link rel="canonical" href="https://thegraillist.com/action-comics-1.html">
@@ -480,11 +480,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
 </script>
 
 </body>

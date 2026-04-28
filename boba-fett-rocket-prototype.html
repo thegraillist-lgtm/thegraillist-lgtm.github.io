@@ -49,7 +49,7 @@
     
     <title>Boba Fett Rocket Prototype: The $230k Story of the Forbidden Toy | The Grail List</title>
 <meta name="description" content="The story of the rocket-firing Boba Fett prototype. Learn why this dangerous Star Wars toy became the ultimate collectible worth $230,000.">
-    <meta name="keywords" content="Boba Fett prototype, Rocket firing Boba Fett, Kenner Star Wars, most expensive toys, J-Slot Boba Fett, zberateľské hračky, Star Wars rarity">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="The Grail List">
 
     <link rel="canonical" href="https://thegraillist.com/boba-fett-rocket-prototype.html">
@@ -479,12 +479,26 @@ function rejectCookies() {
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    requestAnimationFrame(() => {
-        document.body.classList.add("visible");
-    });
-});
-</script>
+function revealBody() {
+    const run = () => {
+        requestAnimationFrame(() => {
+            document.body.classList.add("visible");
+        });
+    };
 
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(run);
+    } else {
+        // fallback pre staršie prehliadače
+        setTimeout(run, 50);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealBody);
+} else {
+    revealBody();
+}
+</script>
 </body>
 </html>
